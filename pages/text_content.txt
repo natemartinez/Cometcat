@@ -1,0 +1,405 @@
+
+<div id="overview-content"> 
+     <div class="container">    
+       <div class="p-5 text-white rounded">
+         <div class="row">
+             <div class="col-md-4">
+              <img class="float-start img-fluid rounded" src="../images/earth_real.jpg" alt="earth from space" width="350" height="275">
+              </div>
+             <div class="col-md-8">
+                <h1 class="text-center" id='intro-heading'>
+                  Hello! I am <strong>Earth</strong>!
+                </h1>
+                <div class='mx-auto' id='quick-facts-box'>
+                  <h2>Quick Facts:</h2>
+                  <p>
+                  Surface Temperature: -88 to 58° C<br>
+                  Time to orbit the sun: 365.26 Earth days<br>
+                  Number of moons: 1<br>
+                  5th Largest planet in the solar system<br>
+                  Origin of name: Old English/Germanic language<br>
+                  
+                  </p>
+                  
+                </div>
+              </div>
+           </div>
+              
+            
+
+            <div class="row">
+              <div class='col-lg-3'>
+              </div>
+              <div class="col-lg-6 bg-dark articles first-row">
+                <h1 class='text-center'>Learn more about your home!</h1>
+              </div>
+              <div class='col-lg-3'>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class='col-md-2'></div>
+              <div class='col-md-8 info-sec'>
+                  <div class='row'>
+                    <div class='col header-box text-center' id=''>
+                      <h2 class='box-title'>Land</h2>
+                      <button class='info-btn' id='land-btn'>Learn more</button>
+                    </div>
+                    <div class='col'><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ea adipisci aliquid natus officia, iusto itaque qui alias doloremque ut facilis delectus recusandae nesciunt eius repellat ullam perferendis expedita.</p></div>
+                  </div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+            <div class='row' id='land-row'>
+              <div class='col-md-2'></div>
+              <div class='col-md-8 sec-menu' id='land-menu'>
+              <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>How is the Earth formed?</strong> 
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       - Tectonic Plates: Big puzzle pieces<br>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                       <strong>What does other parts of the world look like?</strong> 
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        - Different climates around the world<br>
+                        - How do trees grow?<br>
+                        - Deserts to Desserts: How extreme climates are made
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>Was the Earth always like this?</strong> 
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       - Pangaea<br>
+                       - Prehistoric creatures
+                      </div>
+                    </div>
+                  </div>
+                </div>   
+              </div> 
+              <div class='col-md-2'></div>
+            </div>
+
+            <div class="row">
+                 <div class='col-md-2'></div>
+                 <div class='col-md-8 info-sec'>
+                   <div class='row'>
+                     <div class='col'><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ea adipisci aliquid natus officia, iusto itaque qui alias doloremque ut facilis delectus recusandae nesciunt eius repellat ullam perferendis expedita.</p></div>
+                     <div class='col header-box text-center'>
+                       <h2 class='box-title'>Sea</h2>
+                       <button class='info-btn' id='sea-btn'>Learn more</button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class='col-md-2'></div>
+            </div>
+            <div class='row' id='sea-row'>
+              <div class='col-md-2'></div>
+              <div class='col-md-8 sec-menu' id='sea-menu'>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>What's so special about water?</strong> 
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       - The most important resource<br>
+                       - The 5 main bodies of water
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                       <strong>How do animals live underwater?</strong>  
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                         - Gills: How do they work?<br>
+                         - The Ocean Zones
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>Has there been any cool discoveries down below?</strong> 
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                         - Creepy sea creatures<br>
+                         - Famous Shipwrecks<br>
+                         - Mythical creatures
+                      </div>
+                    </div>
+                  </div>
+                </div>   
+              </div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+  
+            <div class="row">
+              <div class='col-md-2'></div>
+              <div class='col-md-8 info-sec'>
+                  <div class='row'>
+                    <div class='col header-box text-center'>
+                     <h2 class='box-title'>Air</h2>
+                     <button class='info-btn' id='air-btn'>Learn more</button>
+                    </div>
+                    <div class='col'><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ea adipisci aliquid natus officia, iusto itaque qui alias doloremque ut facilis delectus recusandae nesciunt eius repellat ullam perferendis expedita.</p></div>
+                  </div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+            <div class='row' id='air-row'>
+              <div class='col-md-2'></div>
+              <div class='col-md-8 sec-menu' id='air-menu'>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>What makes air so special?</strong>
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                         - Oxygen: Keeps the body goin'<br>
+                         - Waves of air <br>
+                         - Tornados, Hurricanes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>How is the sky made?</strong>
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                         - The Cottonballs above us<br>
+                         - Layers of the sky
+                         - Natural phenomenons
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                         <strong>Riding through the skies</strong>
+                      </button>
+                    </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                       <div class="accordion-body">
+                         - Conquering the sky: How flying is possible<br>
+                         - Airplanes and other flying machines
+                       </div>
+                     </div>
+                   </div>
+                 </div>   
+                </div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+
+
+            <div class="row">
+              <div class='col-md-2'></div>
+              <div class='col-md-8 info-sec'>
+                  <div class='row'>
+                   <div class='col'><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ea adipisci aliquid natus officia, iusto itaque qui alias doloremque ut facilis delectus recusandae nesciunt eius repellat ullam perferendis expedita.</p>
+                   </div>
+                   <div class='col header-box text-center'>
+                     <h2 class='box-title'>Beyond</h2>
+                     <button class='info-btn' id='beyond-btn'>Learn more</button>
+                   </div>                
+                  </div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+            <div class='row' id='beyond-row'>
+              <div class='col-md-2'></div>
+              <div class='col-md-8 sec-menu' id='beyond-menu'>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Natural Forces
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        - Gravity: The story of a falling apple<br>
+                        - Light waves
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        The Moon
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       - Our closest neighbor, the Moon
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        
+                      </button>
+                    </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                       <div class="accordion-body">
+                         
+                       </div>
+                     </div>
+                   </div>
+                 </div>   
+                </div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+
+            <div class='row img-row'>
+              <div class='col-md-2'></div>
+              <div class='col-md-4'><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quisquam praesentium iure corporis vero! Ratione sapiente rem quam, labore illo molestias distinctio at recusandae mollitia quaerat voluptatibus quia error ea?</p></div>
+              <div class='col-md-4 earth-from-moon'>
+                <div class='test-square'></div>
+              </div>
+              <div class='col-md-2'></div>
+            </div>
+
+      
+
+            <div class="container">
+                <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                  <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                    </a>
+                    <p class="text-muted">&copy; 2022</p>
+                  </div>
+              
+                  <div class="col mb-3">
+              
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+                </footer>
+            </div>
+           </div>     
+</div> 
+
+<div id='history-content'> 
+  <div id="main-content"> 
+    <div class='container'>      
+    </div>          
+  </div>
+
+  <div class="container">
+                <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                  <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                    </a>
+                    <p class="text-muted">&copy; 2022</p>
+                  </div>
+              
+                  <div class="col mb-3">
+              
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+                </footer>
+          </div>
+</div>
