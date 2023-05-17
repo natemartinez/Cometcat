@@ -13,7 +13,7 @@
     <title>CometCat</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/our_world.css">
+    <link rel="stylesheet" href="../styles/space_neighbors.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Cairo&display=swap" rel="stylesheet">
@@ -31,9 +31,7 @@
 <body>
     <div class="wrapper">
         <nav id="sidebar">
-            <div class="sidebar-header">
-                
-            </div>
+            <div class="sidebar-header"></div>
 
             <ul class="list-unstyled components">
                 <li class="active">
@@ -72,8 +70,145 @@
               <img src="../images/space_long.jpg" alt="stars" class="wallpaper">
               <img src="../images/logo.png" alt="cat jumping over words" id="logo">
            </div>
-                                                                          
-           
+
+           <div class='grid_container'>
+             <div class='header_sec'></div>
+             <div class='sun_sec planet_sec'>
+              <img class='planet_bkgrd' src="../images/sun_surface.jpg" alt="">
+              <div class='planet_main'>
+              <img id='sun_pic' class='planet_pic appear' src="../images/sun.png" alt="">
+              <p class='planet_title appear'>Sun</p>
+              </div>
+              
+             </div>
+             <div class='mercury_sec planet_sec'>
+               <img class='planet_bkgrd' src="../images/mercury_surface.jpg" alt="">
+               <div class='planet_main'>
+                <img id='mercury_pic' class='planet_pic appear' src="../images/mercury.png" alt="planet mercury">
+                <p class='planet_title'>Mercury</p>
+               </div>
+               
+             </div>
+             <div class='venus_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/venus_surface.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='venus_pic' class='planet_pic appear' src="../images/venus.png" alt="planet venus">
+                 <p class='planet_title'>Venus</p>
+                </div>
+                
+             </div>
+             <div class='mars_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/mars_surface.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='mars_pic' class='planet_pic appear'   src="../images/mars.png" alt="">
+                 <p class='planet_title'>Mars</p>
+                </div>
+                
+             </div>
+             <div class='jupiter_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/jupiter_surface.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='jupiter_pic' class='planet_pic appear'  src="../images/jupiter.png" alt="">
+                 <p class='planet_title appear'>Jupiter</p>
+                </div>
+                <div id='jupCarousel' class='planet_menu carousel'>
+                   <div class='slide active'>
+                    <div id='comp'>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, aperiam id quo qui laborum soluta illo repudiandae ducimus quaerat magni optio provident consequatur tempore quidem. Quaerat commodi unde quia consequuntur?</p>
+                    </div> 
+                   </div>
+
+                   <div class='slide'>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nulla mollitia quasi adipisci est quibusdam nobis? Quod, labore? Quia ullam dignissimos quidem error odio ducimus soluta voluptate non quam nam?</p>
+                   </div>
+        
+                   <button class='prev-button'>Prev</button>
+                   <button class='next-button'>Next</button>
+                </div>
+                
+             </div>
+             <div class='saturn_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/saturn_rings.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='saturn_pic' class='planet_pic appear'  src="../images/saturn.png" alt="">
+                 <p class='planet_title'>Saturn</p>
+                </div>
+                
+             </div>
+             <div class='uranus_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/uranus_surface.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='uranus_pic' class='planet_pic appear' src="../images/uranus.png" alt="">
+                 <p class='planet_title'>Uranus</p>
+                </div>
+                
+             </div>
+             <div class='neptune_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/neptune_surface.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='neptune_pic' class='planet_pic appear' src="../images/neptune.png" alt="">
+                 <p class='planet_title'>Neptune</p>
+                </div>
+                
+             </div>
+             <div class='pluto_sec planet_sec'>
+                <img class='planet_bkgrd' src="../images/pluto_surface.jpg" alt="">
+                <div class='planet_main'>
+                 <img id='pluto_pic' class='planet_pic appear' src="../images/pluto.png" alt="">
+                 <p class='planet_title'>Pluto</p>
+                </div>
+                
+             </div>
+           </div>
+
+           <div class="container">
+                <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                  <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                    </a>
+                    <p class="text-muted">&copy; 2022</p>
+                  </div>
+              
+                  <div class="col mb-3">
+              
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                  </div>
+                </footer>
+            </div>
+          </div>
 
         </div>   
 

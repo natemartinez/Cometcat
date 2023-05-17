@@ -5,17 +5,6 @@ $(document).ready(function() {
         $('#logo').toggleClass('push');
         $('.earth-container').toggleClass('move');
     });
-
-    $('#ow-link').on('click', function(){
-      $("#history-content").hide();
-      $("#overview-content").show();
-
-    });
-    $('#history-link').on('click', function(){
-      $("#overview-content").hide();
-      $("#history-content").show();
-  
-    });
     let lat;
     let long;
     if(navigator.geolocation){
@@ -143,31 +132,38 @@ $(document).ready(function() {
        });
     };
 
-    $('#land-btn').on('click', function(){
-      $('#land-menu').slideToggle();
-    })
-    $('#sea-btn').on('click', function(){
-      $('#sea-menu').slideToggle();
-    })
-    $('#air-btn').on('click', function(){
-      $('#air-menu').slideToggle();
-    })
-    $('#beyond-btn').on('click', function(){
-      $('#beyond-menu').slideToggle();
-    })
-     
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
+  $('.planet_main').on('click', function(){
+    let background = $(this).siblings('img'); 
+    $(this).children().toggleClass('disappear appear');
+    background.toggleClass('menu_appear');
+  })
+  
+  var slides = $('.slide');
+  var prevButton = $('.prev-button');
+  var nextButton = $('.next-button');
+  var currentSlide = 0;
 
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
-        }
-      });
+  showSlide(currentSlide);
+
+  prevButton.click(function() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
     }
+    showSlide(currentSlide);
+  });
+  nextButton.click(function() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  });
+
+  function showSlide(index) {
+    slides.removeClass('active');
+    slides.eq(index).addClass('active');
+  }
+
+  
 });

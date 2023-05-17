@@ -79,14 +79,15 @@
                 <img id='water_img' src="../images/ocean.jpg" alt="desert">
                 <img id='clouds_img' src="../images/clouds.jpg" alt="mountains">
                 <div id='header_pg'>
-                  <h1>The Blue Marble</h1>
+                  <h1>The Blue Marble</h1><br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis voluptatem maiores perspiciatis porro consequatur velit sequi corrupti nesciunt quasi incidunt, aut aliquid distinctio in commodi labore est optio. Obcaecati.</p>
                 </div>
              </div>
 
              <div class='gl_header'>
-                <p class='text-left'>The</p>           
-                <p class='text-center'>Goldilocks</p>           
-                <p class='text-right'>Zone</p>           
+                <p class='text-left font-weight-bold'>The</p>           
+                <p class='text-center font-weight-bold'>Goldilocks</p>           
+                <p class='text-right font-weight-bold'>Zone</p>           
              </div>
 
              <div class='gl_content_box'>
@@ -99,6 +100,9 @@
                           
              </div>
 
+             <div class='lc_header'>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos accusantium neque saepe aut? Commodi eaque praesentium itaque ducimus adipisci. Qui necessitatibus repudiandae aliquid est ipsum saepe alias dolore veritatis.</p>
+             </div>
 
              
              <div class='life_content'>
@@ -107,18 +111,23 @@
               <img id='mountain' src="../images/mountains_ow.jpg" alt="snowy mountain">  
               <img id='rainforest' src="../images/rainforest.jpg" alt="rainforest">
               <img id='arizona' src="../images/arizona.jpg" alt="arizona scenery">
-              <div id='life_content_text'>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam dignissimos atque blanditiis natus temporibus illo dolores, expedita facere consectetur minima rerum tenetur iure ea quidem provident modi odit aut?</p>
-              </div>
+              <p id='life_content_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam dignissimos atque blanditiis natus temporibus illo dolores, expedita facere consectetur minima rerum tenetur iure ea quidem provident modi odit aut?</p>
+             
              </div>
 
              <div class='moon_content'>
-               <p id='moon_content_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci exercitationem provident ex sequi minima quo officia error facere itaque omnis, corrupti ipsam possimus veritatis deserunt architecto laboriosam commodi voluptates optio.</p>
-               <button id='moon_button'>Check it out!</button>
-               <div id='bg_diamond'></div>
+               <div id='moon_content_text'>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci exercitationem provident ex sequi minima quo officia error facere itaque omnis, corrupti ipsam possimus veritatis deserunt architecto laboriosam commodi voluptates optio.</p>
+                 <button id='moon_button'>Check it out!</button>
+               </div>
+              
+               
+              <div id='bg_diamond'></div>
                <div id='bg_diamond_2'></div>
                <img id='moon_pic' src="../images/moon.png" alt="the moon">
                <img id='cat_logo_moon' src="../images/logo_cat.png" alt="cat jumping">
+               
+              
                </div>
  
              <div class='end_content'>
