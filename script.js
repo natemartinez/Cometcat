@@ -134,24 +134,21 @@ $(document).ready(function() {
 
   $('.planet_main').on('click', function(){
     let background = $(this).siblings('img'); 
+    let title = $('.planet_main_title');
+
     $(this).children().toggleClass('disappear appear');
     background.toggleClass('menu_appear');
+
+    title.toggleClass('disappear appear')
+
   })
-  
+
   var slides = $('.slide');
-  var prevButton = $('.prev-button');
-  var nextButton = $('.next-button');
+  var nextButton = $('.next_button');
   var currentSlide = 0;
 
   showSlide(currentSlide);
 
-  prevButton.click(function() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = slides.length - 1;
-    }
-    showSlide(currentSlide);
-  });
   nextButton.click(function() {
     currentSlide++;
     if (currentSlide >= slides.length) {
@@ -165,5 +162,6 @@ $(document).ready(function() {
     slides.eq(index).addClass('active');
   }
 
+  
   
 });

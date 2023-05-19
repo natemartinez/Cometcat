@@ -369,7 +369,6 @@ a.article:hover {
 }
 
 
-
 .planet_title{
     position: relative;
     z-index: 2;
@@ -407,12 +406,16 @@ a.article:hover {
         opacity: 1;
     }
 }
-
+.planet_main_title{
+    position: absolute;
+    z-index: 1;
+    margin-top: -7em;
+    margin-left: 9em;
+    font-size: 3em;
+}
 .planet_menu{
-  width: 70em;
+  width: 76em;
   position: absolute;
-  display: flex;
-  flex-direction: row;
 }
 
 .slide{
@@ -422,6 +425,50 @@ a.article:hover {
 .slide.active{
     opacity: 1;
 }
+
+.stats_div{
+    display: flex;
+    position: relative;
+    margin-top: 10em;
+    margin-left: 5em;
+    
+}
+.comp{
+    display: flex;
+    position: relative;
+    margin-top: 1em;
+    margin-right: 5em;
+    align-items: baseline;
+}
+.stats{
+    display: flex;
+}
+
+.ff_div{
+    display: flex;
+    position: absolute;
+    margin-top: -14em;
+    margin-left: 5em;
+}
+#ff_img{
+    width: 350px;
+}
+
+.ff_text{
+    margin-left: 1em;
+    text-align: center;
+    padding: 2em;
+}
+.ff_text h1{
+    padding-bottom: 1em;
+}
+.next_button{
+    margin-top: 2em;
+    width: 50px;
+    float: right;
+    height:200px;
+}
+
 
 .sun_sec{
     grid-row: 2 / 4;
@@ -457,6 +504,11 @@ a.article:hover {
     margin-left: 8em;
 }
 
+.earth_stats_pic{
+    width: 75px;
+    height: 75px;
+}
+
 .mars_sec{
     grid-row: 8/10;
 }
@@ -473,6 +525,10 @@ a.article:hover {
     width: 18em;
     height: 18em;
     margin-left: 10em;
+}
+#jup_stats_pic{
+    width: 135px;
+    height: 135px;
 }
 
 .saturn_sec{

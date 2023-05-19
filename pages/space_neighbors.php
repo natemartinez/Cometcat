@@ -107,23 +107,63 @@
              </div>
              <div class='jupiter_sec planet_sec'>
                 <img class='planet_bkgrd' src="../images/jupiter_surface.jpg" alt="">
+                <p class='planet_main_title disappear'>Jupiter's Stats</p>
+                 
                 <div class='planet_main'>
-                 <img id='jupiter_pic' class='planet_pic appear'  src="../images/jupiter.png" alt="">
-                 <p class='planet_title appear'>Jupiter</p>
+                  <img id='jupiter_pic' class='planet_pic appear'  src="../images/jupiter.png" alt="">
+                  <p class='planet_title appear'>Jupiter</p>
                 </div>
                 <div id='jupCarousel' class='planet_menu carousel'>
-                   <div class='slide active'>
-                    <div id='comp'>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, aperiam id quo qui laborum soluta illo repudiandae ducimus quaerat magni optio provident consequatur tempore quidem. Quaerat commodi unde quia consequuntur?</p>
-                    </div> 
+                   <div class='slide active stats_div'>
+                     <div class='comp'>
+                        <img id='jup_stats_pic' src="../images/jupiter.png" alt="">
+                        <img class='earth_stats_pic' src="../images/earth.png" alt="">
+                     </div>
+                     <div class='stats'>
+                       <div class='stats_col_1'>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quos ad beatae aperiam necessitatibus temporibus ut eligendi corrupti, reprehenderit vel molestias ipsam incidunt doloremque sapiente. Quod minus dolores non quas.</p>
+                       </div>
+                       <div class='stats_col_2'>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis facilis eligendi perferendis consectetur molestiae commodi, adipisci illo delectus unde voluptatem molestias voluptatibus qui tempora dignissimos totam soluta dolorum sapiente odio.</p>
+                       </div>
+                     </div>
+                     <button class='next_button'>
+                       Next
+                     </button>
                    </div>
-
-                   <div class='slide'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nulla mollitia quasi adipisci est quibusdam nobis? Quod, labore? Quia ullam dignissimos quidem error odio ducimus soluta voluptate non quam nam?</p>
-                   </div>
-        
-                   <button class='prev-button'>Prev</button>
-                   <button class='next-button'>Next</button>
+                   <div class='slide ff_div'>
+                     <img id='ff_img' src="../images/wormhole.jpg" alt="">
+                     <div class='ff_text'>
+                      <h1>This is the example title</h1>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum a vitae nisi! Sunt ullam soluta reiciendis, et sed libero corporis facilis reprehenderit, dolor dignissimos nisi iste maiores tempore natus eaque!</p>
+                     </div>
+                     
+                     <button class='next_button'>
+                       Next
+                     </button>
+                   </div>      
+                   <div class='slide ff_div'>
+                     <img id='ff_img' src="../images/wormhole.jpg" alt="">
+                     <div>
+                      <h1>This is the example title 2</h1>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum a vitae nisi! Sunt ullam soluta reiciendis, et sed libero corporis facilis reprehenderit, dolor dignissimos nisi iste maiores tempore natus eaque!</p>
+                     </div>
+                     
+                     <button class='next_button'>
+                       Next
+                     </button>
+                   </div>      
+                   <div class='slide ff_div'>
+                     <img id='ff_img' src="../images/wormhole.jpg" alt="">
+                     <div>
+                      <h1>This is the example title 2</h1>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum a vitae nisi! Sunt ullam soluta reiciendis, et sed libero corporis facilis reprehenderit, dolor dignissimos nisi iste maiores tempore natus eaque!</p>
+                     </div>
+                     
+                     <button class='next_button'>
+                       Next
+                     </button>
+                   </div>      
                 </div>
                 
              </div>
