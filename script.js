@@ -132,36 +132,46 @@ $(document).ready(function() {
        });
     };
 
-  $('.planet_main').on('click', function(){
+  $('.planet_menu_btn').on('click', function(){
     let background = $(this).siblings('img'); 
     let title = $('.planet_main_title');
-
+    let planet_main = $(this).prevAll('.planet_main').children();
+    
+    planet_main.toggleClass('disappear appear');
     $(this).children().toggleClass('disappear appear');
     background.toggleClass('menu_appear');
+    title.toggleClass('disappear appear');
 
-    title.toggleClass('disappear appear')
-
+    $(this).toggleClass('btn_fade btn_move');
   })
 
   var slides = $('.slide');
   var nextButton = $('.next_button');
-  var currentSlide = 0;
-
-  showSlide(currentSlide);
+  var currentSlide = 0; 
 
   nextButton.click(function() {
+    let title = $('#planet_div_title');
+    let parent = $(this).parent();
+    slides = parent.children().filter('.slide');
     currentSlide++;
     if (currentSlide >= slides.length) {
       currentSlide = 0;
     }
-    showSlide(currentSlide);
+    showSlide(currentSlide, slides);
+    if(currentSlide > 0){
+      title.text('Fun Facts') 
+    } else{
+      title.text('Stats')
+    };
   });
 
-  function showSlide(index) {
-    slides.removeClass('active');
-    slides.eq(index).addClass('active');
+  function showSlide(index,location) {
+    location.removeClass('active');
+    location.eq(index).addClass('active');
   }
 
-  
+
+  // First, we're going to take the index of the slides
+  // Afterwards, we can take it and output the slides without [0]
   
 });
