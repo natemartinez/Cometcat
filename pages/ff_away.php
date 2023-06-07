@@ -12,7 +12,7 @@
     <title>CometCat</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/our_world.css">
+    <link rel="stylesheet" href="../styles/ff_away.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Cairo&display=swap" rel="stylesheet">
@@ -40,11 +40,15 @@
                 </li>
   
                 <li>
+                    <a id="firstItem" href="our_world.php">Our World</a> 
+                </li>
+
+                <li>
                     <a id="secondItem" href="space_neighbors.php">Our Space Neighbors</a> 
                 </li>
 
                 <li>
-                    <a id="thirdItem" href="far_away.php">Far Far Away</a>
+                    <a id="thirdItem" href="ff_away.php">Far Far Away</a>
                 </li>
 
                 <li>
@@ -59,92 +63,70 @@
                     <a id="sixthItem" href="comet_cadets.php">Comet Cadets</a>
                 </li>
             </ul>
-       </nav>
+        </nav>
  
         <div id="content">
            <header id='header-banner'class="container-fluid" style="position:relative;">
               <button type="button" id="sidebarCollapse" class="btn btn-info" title="toggle_sidebar">
                 <i class="fas fa-align-left"></i>   
               </button>
-              <img src="../images/space_long.jpg" alt="stars" class="wallpaper">
+              <div class='wallpaper'></div>
               <img src="../images/logo.png" alt="cat jumping over words" id="logo">
            </header>
 
-           <div class='grid_container'><img id='earth_wp' src="../images/earth_wp.jpg" alt="earth">
-             <div class='grid_header'>
-                <div id='top_square'></div>
-                <div id='mid_square'></div>
-                <div id='btm_square'></div>
-                <img id='hills_img' src="../images/field.jpg" alt="hills">
-                <img id='water_img' src="../images/ocean.jpg" alt="desert">
-                <img id='clouds_img' src="../images/clouds.jpg" alt="mountains">
-                <div id='header_pg'>
-                  <h1>The Blue Marble</h1><br>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis voluptatem maiores perspiciatis porro consequatur velit sequi corrupti nesciunt quasi incidunt, aut aliquid distinctio in commodi labore est optio. Obcaecati.</p>
-                </div>
-             </div>
-
-             <div class='gl_header'>
-                <p class='text-left font-weight-bold'>The</p>           
-                <p class='text-center font-weight-bold'>Goldilocks</p>           
-                <p class='text-right font-weight-bold'>Zone</p>           
-             </div>
-
-             <div class='gl_content_box'>
-                  <p id='header_1'>Why is the Sun so important?</p>
-                 <p id='gl_first_text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eos dignissimos aliquid assumenda libero tenetur minus perspiciatis, incidunt cupiditate quas expedita soluta deleniti officiis odio. At inventore veniam dolorum pariatur?</p>
-                 <img id='sunrise' src="../images/sunrise.jpg" alt="sunrise">  
-                 <img id='soup_pic' src="../images/soup.jpg" alt="soup">
-                 <p id='header_2'> What's the Goldilocks Zone?</p>
-                 <p id='gl_second_text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi deserunt ducimus odio at inventore unde! Culpa eum similique nemo sunt. Quas, eligendi? Iure a labore suscipit delectus blanditiis aut saepe.</p>  
-                          
-             </div>
-
-             <div class='lc_header'>
-             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos accusantium neque saepe aut? Commodi eaque praesentium itaque ducimus adipisci. Qui necessitatibus repudiandae aliquid est ipsum saepe alias dolore veritatis.</p>
-             </div>
-
-             
-             <div class='life_content'>
-              <div id='bg_square'></div>
-              <img id='ocean_floor' src="../images/ocean_floor.jpg" alt="ocean floor">
-              <img id='mountain' src="../images/mountains_ow.jpg" alt="snowy mountain">  
-              <img id='rainforest' src="../images/rainforest.jpg" alt="rainforest">
-              <img id='arizona' src="../images/arizona.jpg" alt="arizona scenery">
-              <p id='life_content_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam dignissimos atque blanditiis natus temporibus illo dolores, expedita facere consectetur minima rerum tenetur iure ea quidem provident modi odit aut?</p>
-             
-             </div>
-
-             <div class='moon_content'>
-               <div id='moon_content_text'>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci exercitationem provident ex sequi minima quo officia error facere itaque omnis, corrupti ipsam possimus veritatis deserunt architecto laboriosam commodi voluptates optio.</p>
-                 <button id='moon_button'>Check it out!</button>
-               </div>
+          <div class='grid_container'>
+            <div class='intro'>
               
-               
-              <div id='bg_diamond'></div>
-               <div id='bg_diamond_2'></div>
-               <img id='moon_pic' src="../images/moon.png" alt="the moon">
-               <img id='cat_logo_moon' src="../images/logo_cat.png" alt="cat jumping">
-  
-              </div>
- 
-             <div class='end_content'>
-              <img id='n_lights_img' src="../images/nLights.jpg" alt="northern lights">
-              <div id='end_img_square_one'></div>
-              <div id='end_img_square_two'></div>
-              <div id='end_text_square'>
-                <div id='end_text'>
-                 <h1>We still have more to learn!</h1>
-                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime totam asperiores quae facere qui iure obcaecati impedit sapiente autem. Laboriosam dolorem quae ea quaerat omnis! Ab eius corrupti libero quam?</p>
-                </div>
+              <div class='intro_img_wrapper'>
+                <img id='tscope_img' src="../images/telescope.jpg" alt="">
+                <img id='galaxy_img' src="../images/galaxy.jpg" alt="">
                 
               </div>
-             </div>
-          </div> 
-           
+              <div class='intro_header'>
+                <p>This is an example of a header</p>
+              </div>
+            </div>
+
+            <div class='info_div'>
+              <div class='info_bkgrd'></div>
+              <p id='info_div_text'>This is the example of a header</p>
+              <div class='info_cards' id='card_one'></div>
+              <div class='info_cards' id='card_two'></div>
+              <div class='info_cards' id='card_three'></div>
+              <div class='info_cards' id='card_four'></div>
+              
+            </div>
+
+            <div class='list_section'>
+              <div id='list_bkgrd'></div>
+              <div id='list_img'></div>
+              <div></div>
+            </div>
+
+            <div class='history_section'>
+             <div id='img_left'></div>
+             <div id='history_header'></div>
+             <div id='img_right'></div>
+            </div>
+
+            <div class='article_section'>
+              <div id='article_header'>
+                <p>This is the example of a header</p>
+              </div>
+              
+              <div class='article_card_section'> 
+                <div class='article_cards'>
+                
+                </div>
+                <div class='article_cards'></div>
+                <div class='article_cards'></div>
+                <div class='article_cards'></div>
+              </div>
+
+            
+          </div>
              
-          <div class="container">
+          <footer class="container">
                 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
                   <div class="col mb-3">
                     <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
@@ -191,10 +173,9 @@
                   </div>
                 </footer>
             </div>
-          </div>
+          </footer>
         </div>
-      
-    </div>
+     </div>
    
 </body>
 

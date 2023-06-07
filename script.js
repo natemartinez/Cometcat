@@ -134,34 +134,37 @@ $(document).ready(function() {
 
   $('.planet_menu_btn').on('click', function(){
     let background = $(this).siblings('img'); 
-    let title = $('.planet_main_title');
+    let title = $(this).prevAll('.planet_main_title');
     let planet_main = $(this).prevAll('.planet_main').children();
     
-    planet_main.toggleClass('disappear appear');
     $(this).children().toggleClass('disappear appear');
+    planet_main.toggleClass('disappear appear');
     background.toggleClass('menu_appear');
     title.toggleClass('disappear appear');
 
     $(this).toggleClass('btn_fade btn_move');
-  })
+  });
 
   var slides = $('.slide');
   var nextButton = $('.next_button');
   var currentSlide = 0; 
 
   nextButton.click(function() {
-    let title = $('#planet_div_title');
     let parent = $(this).parent();
+    let div = $(this).parents('.planet_sec');
+    let divTitle = div.children().filter('.planet_main_title').children();
+
     slides = parent.children().filter('.slide');
     currentSlide++;
+
     if (currentSlide >= slides.length) {
       currentSlide = 0;
     }
     showSlide(currentSlide, slides);
     if(currentSlide > 0){
-      title.text('Fun Facts') 
+      divTitle.text('Fun Facts')
     } else{
-      title.text('Stats')
+      divTitle.text('Stats') 
     };
   });
 
