@@ -100,71 +100,135 @@
               
             </div>
             <div class='astronaut_section'>
-               
-               <div class='descript_astronaut'>
-                <h1 id='astronaut_header'>Astronauts</h1>
+              <p class='header'>Astronauts</p>
+              <div class='section_top'>
+                <div class='part'>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae qui assumenda laudantium numquam optio facilis, impedit voluptas animi? Quidem laborum ipsa voluptas. Explicabo saepe quaerat temporibus aliquid nisi! Tempore, magnam.</p>
+                </div>
+                       
+                <div class='part' id='img_block'>
+                 <img id='astronaut_img' src="../images/astronaut_img.png" alt="">
+                </div>
+              </div> 
+              <p class='header'>Notable Astronauts</p> 
+              <div class='section_btm'>
                 <div>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum sequi soluta molestiae non, culpa dolorem perferendis ut, autem magni laborum accusantium deserunt. Velit vero neque rerum at animi beatae!</p>
-                  <div class='astronaut_img_group'>
-                   <div id='descript_astro_bkgrd1'></div>
-                   <div id='descript_astro_bkgrd2'></div>
-                  
-                   <img id='iss' src="../images/iss.jpg" alt="International Space Station">
-                   <img id='float_img' src="../images/float.jpg" alt="">
-                   <img id='inside_ship' src="../images/inside_ship.jpg" alt="">
-                   <img id='training_img' src="../images/training.jpg" alt="">
-                   <img id='astronaut' src="../images/spacesuit.png" alt="man in spacesuit">              
+                 <div class='part bio_card'>
+                    <img src="../images/nArmstrong.jpg" alt="">
+                 </div>
+                 <div class='part bio_card'>
+                    <img src="../images/bAldrin.jpg" alt="">
                  </div>
                 </div>
-                 
-                
-               </div>
-
-               <div class='notable_astronaut'>
-                 <p>Notable Astronauts</p>
-                  <div class='card_row'>
-                    <div class='bio_card'>
-                     <img src="../images/nArmstrong.jpg" alt="">
-                     <div id='bio_card_info'>
-                       <h1>Neil Armstrong</h1>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div>
-                    </div>
-                    <div class='bio_card'>
-                      <img src="../images/bAldrin.jpg" alt="">
-                       <div id='bio_card_info'>
-                        <h1>Buzz Aldrin</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                       </div>
-                    </div>
-                  </div>       
-                  <div class='card_row'>
-                    <div class='bio_card'>
-                    <img src="../images/yGagarin.jpg" alt="">
-                    <div id='bio_card_info'>
-                      <h1>Yuri Gagarin</h1>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    </div>
-
-                    <div class='bio_card'>
+                <div>
+                 <div class='part bio_card'>
                     <img src="../images/sRide.jpg" alt="">
-                    <div id='bio_card_info'>
-                      <h1>Sally Ride</h1>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 </div>
+                 <div class='part bio_card'>
+                   <img src="../images/yGagarin.jpg" alt="">
+                 </div>
+                </div>
+                
+              </div>  
+             
+            </div>
+                  
+            <div class='astronomy_section'>
+             <p class='header'>Astronomers</p>
+              <div class='section_top'>
+                <div class='part'>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae qui assumenda laudantium numquam optio facilis, impedit voluptas animi? Quidem laborum ipsa voluptas. Explicabo saepe quaerat temporibus aliquid nisi! Tempore, magnam.</p>
+                </div>
+                       
+                <div class='part' id='img_block'>
+                 <img id='astronaut_img' src="../images/astronaut_img.png" alt="">
+                </div>
+              </div> 
+              <p class='header'>Notable Astronomers</p> 
+              <div class='section_btm'>
+                <div>
+                 <div class='part bio_card'>
+                  <img src="../images/einstein.jpg" alt="Albert Einstein">
+                 </div>
+                 <div class='part bio_card'>
+                  <img src="../images/hawking.jpg" alt="Stephen Hawking">
+                 </div>
+                 <div class='part bio_card'>
+                  <img src="../images/kepler.jpg" alt="">
+                 </div>
+                </div>
+                <div>
+                 <div class='part bio_card'>
+                  <img src="../images/iNewton.jpg" alt="">
+                 </div>
+                 <div class='part bio_card'>
+                  <img src="../images/galileo.jpg" alt="">
+                 </div>
+                  <div class='part bio_card'>
+                  <img src="../images/cSagan.jpg" alt="">
+                 </div>
+                </div>     
+              </div>   
+            </div>
+
+            <div class='tech_section'>
+              <p class='header'>Technology</p>
+              <div class='section_top'>
+                <div class='imgWithText'>
+                 <div class='part'>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos doloremque, hic ut velit ratione delectus quibusdam eum dolorem optio omnis, error commodi porro vitae labore. Obcaecati ut vitae necessitatibus maiores!</p>
+                 </div>
+                 <div class='part' id='img_block'><img src="../images/" alt=""></div> 
+                </div>      
+                <div class='imgWithText'>
+                 <div class='part' id='img_block'><img src="../images/" alt=""></div> 
+                 <div class='part'>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos doloremque, hic ut velit ratione delectus quibusdam eum dolorem optio omnis, error commodi porro vitae labore. Obcaecati ut vitae necessitatibus maiores!</p>
+                 </div>
+                 
+                </div>      
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe sequi laborum, sit doloremque adipisci beatae. Blanditiis nihil dolorum esse, ratione facilis veniam iste mollitia, vel iusto quia officiis assumenda necessitatibus.</p>
+              
+            </div>
+            <div class='mission_section'>
+              <p class='header'>Famous Missions</p>
+              <div class='section_btm'>
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+ 
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                  </div>
+                                 
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class='mock'>
+                        <div class='item' id='first_item'></div>
+                      </div>
                     </div>
+                    <div class="carousel-item">
+                      <div class='mock'>
+                        <div class='item' id='second_item'></div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class='mock'>
+                        <div class='item' id='third_item'></div>
+                      </div>
                     </div>
                   </div>
-               </div> 
-            </div>
-          
-       
-            <div class='tech_section'>
-
-
-            </div>
-
-             <div class='mission_section'></div>
+                
+                   <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                   </button>
+                   <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                   </button>
+                  </div>
+                </div>
+              </div>
             </div>
              
           <footer class="container">

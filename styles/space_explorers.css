@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #47748b;
+    background: #2e3236;
     overflow-x: hidden;
 }
 p {
@@ -403,10 +403,13 @@ a.article:hover {
     background-color: red;
     border-radius: 10px;
     margin: 1em;
+    
 }
 .bio_card img{
     width: 12em;
-    height: 16em;
+    height: 15em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 #bio_card_info{
     display: flex;
@@ -422,179 +425,93 @@ a.article:hover {
 
 .astronaut_section{
     display: flex;
-    grid-row:3/9;
-    grid-column: 1/13;
-    background-color: grey;
-    padding: 5em;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#astronaut_header{
-    position: relative;
-    font-size: 4.5rem;
-    
-}
-
-.descript_astronaut{
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 10em;
-    flex-wrap: wrap;
-    margin-bottom: 5em;
-}
-.descript_astronaut p{
-    width: 50%;
-    margin-top: 5em;
-}
-
-.astronaut_img_group{
-    position: relative;
-    margin-right: 5em;
-    width: 50%;
-}
-#iss{
-    position: absolute;
-    height: 13em;
-    width: 18em;
-    margin-left: -5em;
-   
-}
-#float_img{
-    position: absolute;
-    width: 17em;
-    margin-left: 15em;
-    margin-top: -1em;
-}
-#inside_ship{
-    position: absolute;
-    width: 20em;
-    height: 13em;
-    margin-left: 11em;
-    margin-top: 11em;
-}
-#training_img{
-    position: absolute;
-    width: 14em;
-    margin-top: 11em;
-    margin-left: -2em;
-}
-#astronaut{
-    position: relative;
-    z-index: 3;
-    width: 20em;
-    margin-left: 4em;
-}
-
-.notable_astronaut{
-    display: flex;
     flex-direction: column;
+    align-items: center;
+    grid-row:3/7;
+    grid-column: 1/13;
+    background-color: #2e3236;
+    padding: 5em;
+}
+.header{
+    font-size: 3.5em;
+}
+
+.section_top{
+    display: flex;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.part{
+    height: 25em;
+    flex: 1;
+}
+#astronaut_img{
+    width: 35em;
+    height: 22em;
+}
+.section_btm{
+    display: flex;
+    margin: 0 auto;
+    width: 40em;
     justify-content: center;
 }
-.notable_astronaut p{
-    font-size: 2em;
-}
-#notable_astronaut_header{
-    font-size: 4em;
+.bio_card{
+    height: 15em;
 }
 
 .astronomy_section{
     display: flex;
-    grid-row:9/13;
+    grid-row: 7/12;
     grid-column: 1/13;
-    background-color: grey;
     padding: 5em;
+    background-color: #2e3236;
     flex-wrap: wrap;
-    justify-content: center;   
-}
-#astronomy_header{
-    position: relative;
-    margin-bottom: 5em;
-    font-size: 4.5rem;
-    align-self: center;
-}
-
-.descript_astronomy{
-    display: flex;
-    column-gap: 7em;
-    height: 35em;
-    margin-bottom: 23em;
-}
-.descript_astronomy p{
-    width: 50%;
-    
-}
-
-.astronomy_img_group{
-    position: relative;
-    margin-right: 5em;
-    width: 50%;
-}
-#big_scope_img{
-    width: 25em;
-    height: 13em;
-    z-index: 0;
-    position: absolute;
-}
-#study_img{
-    width: 14em;
-    height: 12em;
-    z-index: 1;
-    margin-top: 12em;
-    position: absolute;
-    margin-left: 17em;
-}
-#lab_img{
-    width: 12em;
-    margin-top: 11em;
-    position: absolute;
-    margin-left: -5em;
-    z-index: 2;
-    height: 14em;
-}
-#planetarium_img{
-    width: 20em;
-    margin-top: 22em;
-    z-index: 3;
-    height: 13em;
-    position: absolute;
-}
-#circle_scope_img{
-    position: absolute;
-    z-index: 3;
-    width: 16em;
-    margin-top: 9em;
-    margin-left: 4em;
-}
-
-.notable_astronomy{
-    display: flex;
-    flex-direction: row;
-    column-gap: 5em;
-    flex-wrap: wrap;
-    margin-top: -10em;
-    justify-content: center;
-}
-#notable_astronomy_header{
-    font-size: 3em;
-    margin-top: -5em;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .tech_section{
     display: flex;
-    grid-row: 13/19;
     grid-column: 1/13;
+    grid-row: 11/18;
+    flex-direction: column;
+    align-items: center;
     padding: 5em;
-    background-color: rgb(51, 104, 51);
-    flex-wrap: wrap;
+    background-color: #2e3236;
 }
-#tech_header{
-    position: relative;
-    margin: 0 auto;
-    font-size: 4.5rem;
+.imgWithText{
+    display: flex;
+    flex-direction: row;
+}
+.mock{
+    width: 60em;
+    height: 50em;
+    padding: 10em 3em;
+}
+.item{
+    width: 70em;
+    height: 30em;
+    
+}
+
+#first_item{
+    background-color: cadetblue;
+}
+#second_item{
+    background-color: red;
+}
+#third_item{
+    background-color: blue;
+}
+
+.mission_section{
+    display: flex;
+    grid-row: 15/18;
+    grid-column: 1/13;
+    justify-content: center;
 }
 
 
@@ -757,8 +674,9 @@ a.article:hover {
         left: 13em;
         
     }
-    #moon-pic{
-        width: 60%;
+    
+    .astronaut_top{
+        flex-direction: column;
     }
 
     
@@ -793,6 +711,10 @@ a.article:hover {
         font-size: 4em;
         margin-left: 4em;
     }
+
+    .astronaut_top{
+        flex-direction: column;
+    }
 }
 
 @media(min-width:866px) and (max-width:1023px) {
@@ -815,12 +737,44 @@ a.article:hover {
         top: -2em;
     }
 
-    .intro-cards{
-        width: 80%;
-        margin-top:50px
+    .astronaut_top{
+        flex-direction: column;
+    }
+
+    .astronaut_btm{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bio_card{
+        flex: none;
     }
     
 
+}
+
+@media screen and (max-width:1023px) {
+    .astronomy_section{
+        flex-wrap: nowrap;
+    }
+
+    .section_top{
+        flex-direction: column;
+    }
+
+    .section_btm{
+        width: 30em;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bio_card{
+        flex: none;
+    }
+    
+
+    .tech_section{
+        grid-row: 15/18;
+    }
 }
 
 @media  screen and (min-width:1024px) {

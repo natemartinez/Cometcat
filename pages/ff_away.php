@@ -30,8 +30,7 @@
 <body>
     <div class="wrapper">
         <nav id="sidebar">
-            <div class="sidebar-header">
-                
+            <div class="sidebar-header">      
             </div>
 
             <ul class="list-unstyled components">
@@ -53,10 +52,6 @@
 
                 <li>
                     <a id="fourthItem" href="space_explorers.php">Space Explorers</a>
-                </li>
-
-                <li>
-                    <a id="fifthItem" href="gadgets_tech.php">Gadgets & Tech</a>
                 </li>
 
                 <li>

@@ -320,7 +320,7 @@ a.article:hover {
 .grid_container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(19, 250px);
+    grid-template-rows: repeat(20, 250px);
 }
 
 
@@ -329,23 +329,31 @@ a.article:hover {
     align-items: center;
     grid-column: 1/12;
     width: 100vw;
+    border-bottom: solid 20px black;
 }
 
-#header_sec{
-    grid-column: 4/8;
-    grid-row: 1/2;
+.header_sec{
+    grid-column: 3/9;
+    grid-row: 1/3;
     text-align: center;
 }
-#header_sec h2{
-    margin-top: 3em;
+.header_sec h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 4em;
 }
+.header_sec p{
+    width: 30em;
+    font-size: 1.7em;
+}
+
 
 .planet_bkgrd{
     width: 100vw;
     position: absolute;
     z-index: 1;
     height: 30em;
-    filter: brightness(65%);
+    filter: brightness(55%);
     animation: revert_height 1s;
 }
 .menu_appear{
@@ -395,6 +403,10 @@ a.article:hover {
     margin-right: 11em;
     transition: transform 0.3s ease;
 }
+.planet_pic:hover{
+    transform: scale(1.1);
+}
+
 .disappear{
     animation: fade_out 0.2s forwards;
     animation-timing-function: ease-in;
@@ -539,7 +551,7 @@ a.article:hover {
 }
 
 .sun_sec{
-    grid-row: 2 / 4;
+    grid-row: 3 / 5;
 }
 #sun_pic{
     width: 20em;
@@ -550,7 +562,7 @@ a.article:hover {
 }
 
 .mercury_sec{
-    grid-row: 4/6;
+    grid-row: 5/7;
 }
 .mercury_sec:hover{
     border-bottom: 4px solid black;
@@ -569,7 +581,7 @@ a.article:hover {
 }
 
 .venus_sec{
-    grid-row:6/8;
+    grid-row:7/9;
 }
 #venus_pic{
     width: 24em;
@@ -582,7 +594,7 @@ a.article:hover {
 
 
 .mars_sec{
-    grid-row: 8/10;
+    grid-row: 9/11;
 }
 #mars_pic{
     width: 12em;
@@ -595,7 +607,7 @@ a.article:hover {
 
 
 .jupiter_sec{
-    grid-row: 10/12;
+    grid-row: 11/13;
 }
 #jupiter_pic{
     width: 18em;
@@ -611,7 +623,7 @@ a.article:hover {
 }
 
 .saturn_sec{
-    grid-row: 12/14;
+    grid-row: 13/15;
 }
 #saturn_pic{
     width: 33em;
@@ -623,7 +635,7 @@ a.article:hover {
 }
 
 .uranus_sec{
-    grid-row: 14/16;
+    grid-row: 15/17;
 }
 #uranus_pic{
     width: 15em;
@@ -635,7 +647,7 @@ a.article:hover {
 }
 
 .neptune_sec{
-    grid-row: 16/18;
+    grid-row: 17/19;
 }
 #neptune_pic{
     width: 15em;
@@ -647,7 +659,7 @@ a.article:hover {
 }
 
 .pluto_sec{
-    grid-row: 18/20;
+    grid-row: 19/21;
 }
 #pluto_pic{
     width: 12em;

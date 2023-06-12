@@ -11,6 +11,7 @@ $(document).ready(function() {
         navigator.geolocation.getCurrentPosition((position) => {
             lat = position.coords.latitude;
             long = position.coords.longitude;
+            console.log(lat, long);
           const base = 'http://api.weatherapi.com/v1/forecast.json?key=7f9751cf98a049dd805170718232803&q=' + lat + ',' + long + 
          '&days=5&aqi=no&alerts=no';  
           let currentWeek;
@@ -144,6 +145,7 @@ $(document).ready(function() {
 
     $(this).toggleClass('btn_fade btn_move');
   });
+
 
   var slides = $('.slide');
   var nextButton = $('.next_button');

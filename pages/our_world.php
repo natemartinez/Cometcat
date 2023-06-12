@@ -40,19 +40,19 @@
                 </li>
   
                 <li>
+                    <a id="firstItem" href="our_world.php">Our World</a> 
+                </li>
+
+                <li>
                     <a id="secondItem" href="space_neighbors.php">Our Space Neighbors</a> 
                 </li>
 
                 <li>
-                    <a id="thirdItem" href="far_away.php">Far Far Away</a>
+                    <a id="thirdItem" href="ff_away.php">Far Far Away</a>
                 </li>
 
                 <li>
                     <a id="fourthItem" href="space_explorers.php">Space Explorers</a>
-                </li>
-
-                <li>
-                    <a id="fifthItem" href="gadgets_tech.php">Gadgets & Tech</a>
                 </li>
 
                 <li>
@@ -80,7 +80,9 @@
                 <img id='clouds_img' src="../images/clouds.jpg" alt="mountains">
                 <div id='header_pg'>
                   <h1>The Blue Marble</h1><br>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis voluptatem maiores perspiciatis porro consequatur velit sequi corrupti nesciunt quasi incidunt, aut aliquid distinctio in commodi labore est optio. Obcaecati.</p>
+                  <p>
+                  Earth is a wondrous and awe-inspiring planet, offering a unique combination of beauty, complexity, and fragility. As the only known haven for life in the universe, it is our collective responsibility to cherish, preserve, and safeguard the Blue Planet for future generations, ensuring a sustainable and harmonious coexistence with the natural world that has nurtured us all.
+                  </p>
                 </div>
              </div>
 
@@ -90,56 +92,75 @@
                 <p class='text-right font-weight-bold'>Zone</p>           
              </div>
 
-             <div class='gl_content_box'>
-                  <p id='header_1'>Why is the Sun so important?</p>
-                 <p id='gl_first_text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eos dignissimos aliquid assumenda libero tenetur minus perspiciatis, incidunt cupiditate quas expedita soluta deleniti officiis odio. At inventore veniam dolorum pariatur?</p>
-                 <img id='sunrise' src="../images/sunrise.jpg" alt="sunrise">  
+             <div class='gl_content'>
+                  <p id='header_1'>What's the Goldilocks Zone?</p>
+                 <p id='gl_first_text'>
+                    The Goldilocks Zone, also known as the habitable zone, is when conditions are just right for a planet to have water.
+                    <br>
+                    It is named after the fairytale "Goldilocks and the Three Bears", because like Goldilocks looking for soup that isn't 
+                    too hot nor too cold, there needs to be right conditions for a planet to have water.  
+                 </p>
                  <img id='soup_pic' src="../images/soup.jpg" alt="soup">
-                 <p id='header_2'> What's the Goldilocks Zone?</p>
-                 <p id='gl_second_text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi deserunt ducimus odio at inventore unde! Culpa eum similique nemo sunt. Quas, eligendi? Iure a labore suscipit delectus blanditiis aut saepe.</p>  
+                 <img id='sunrise' src="../images/sunrise.jpg" alt="sunrise">  
+                 <p id='header_2'>Why is the Sun so important?</p>
+                 <p id='gl_second_text'>
+                 The sun's presence and the energy it provides are important to the existence and growth of life on Earth. 
+                 <br>
+                 The distance between the Earth and Sun, is just right for Earth to continue to thrive.
+                 </p>  
                           
              </div>
 
-             <div class='lc_header'>
-             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos accusantium neque saepe aut? Commodi eaque praesentium itaque ducimus adipisci. Qui necessitatibus repudiandae aliquid est ipsum saepe alias dolore veritatis.</p>
+             <div class='terrain_intro'>
+             <h2 class='header text-center'>The Beauty of Nature</h2>
+             <p>
+             
+             </p>
              </div>
 
              
-             <div class='life_content'>
+             <div class='terrain_content'>
               <div id='bg_square'></div>
               <img id='ocean_floor' src="../images/ocean_floor.jpg" alt="ocean floor">
               <img id='mountain' src="../images/mountains_ow.jpg" alt="snowy mountain">  
               <img id='rainforest' src="../images/rainforest.jpg" alt="rainforest">
               <img id='arizona' src="../images/arizona.jpg" alt="arizona scenery">
-              <p id='life_content_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam dignissimos atque blanditiis natus temporibus illo dolores, expedita facere consectetur minima rerum tenetur iure ea quidem provident modi odit aut?</p>
-             
+              <p id='life_content_text'> Our planet is incredibly diverse. Ranging from expansive oceans to towering mountains, lush forests to arid deserts, and frozen polar regions to fertile plains. 
+               Each terrain offers a distinct set of environmental conditions, geological features, and ecosystems, contributing to the planet's remarkable beauty and ecological richness.</p>
+             </div>
+
+             <div class='moon_intro'>
+              <h2 id='moon_header'>Our next door neighbor - The Moon</h2>
+              
              </div>
 
              <div class='moon_content'>
                <div id='moon_content_text'>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci exercitationem provident ex sequi minima quo officia error facere itaque omnis, corrupti ipsam possimus veritatis deserunt architecto laboriosam commodi voluptates optio.</p>
-                 <button id='moon_button'>Check it out!</button>
+                <p>
+                   The moon is more than a decoration in the sky.  Over the centuries, it has captured human imagination and has been the subject of scientific study and exploration.
+                   However, the moon's influence goes beyond just research. It influences us everyday with it's gravitational pull on the Earth's waves. 
+                   While it has no atmosphere or water, it has been an essential space companion to our world.
+                </p>
                </div>
-              
-               
-              <div id='bg_diamond'></div>
+          
+               <div id='bg_diamond'></div>
                <div id='bg_diamond_2'></div>
                <img id='moon_pic' src="../images/moon.png" alt="the moon">
                <img id='cat_logo_moon' src="../images/logo_cat.png" alt="cat jumping">
   
-              </div>
+            </div>
  
              <div class='end_content'>
               <img id='n_lights_img' src="../images/nLights.jpg" alt="northern lights">
-              <div id='end_img_square_one'></div>
-              <div id='end_img_square_two'></div>
+              <div id='end_img_square_one'></div>   
               <div id='end_text_square'>
                 <div id='end_text'>
                  <h1>We still have more to learn!</h1>
-                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime totam asperiores quae facere qui iure obcaecati impedit sapiente autem. Laboriosam dolorem quae ea quaerat omnis! Ab eius corrupti libero quam?</p>
+                 <p>Come join the comet cadet newsletter, as we deilver current news, facts, and other annoucements on our journey through the stars!</p>
                 </div>
-                
+                <button id='cta_button'>Check it out!</button>
               </div>
+              
              </div>
           </div> 
            

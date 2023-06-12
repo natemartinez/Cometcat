@@ -338,34 +338,32 @@ a.article:hover {
     width: 35em;
 }
 #galaxy_img{
-    width: 30em;
+    width: 35em;
     height: 21em;
     position: absolute;
     z-index: 1;
-    margin-left: 6em;
+    margin-left: 2em;
 }
 #tscope_img{
-    width: 13em;
-    height: 16em;
+    width: 12em;
+    height: 17em;
     margin-top: 2em;
     position: relative;
     z-index: 2;
-    margin-left: 2em;
+    margin-left: 26em;
 }
-
 
 .intro_header{
     display: flex;
     position: relative;
-    margin-right: 10em;
+    margin-right:4em;
     margin-top: -1em;
-    width: 59em;
+    width: 62em;
     background-color: black;
     height: 23em;
     justify-content: center;
     
 }
-
 
 .info_div{
     display: grid;

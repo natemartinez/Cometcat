@@ -52,9 +52,7 @@
                     <a id="fourthItem" href="space_explorers.php">Space Explorers</a>
                 </li>
 
-                <li>
-                    <a id="fifthItem" href="/pages/gadgets_tech.html">Gadgets & Tech</a>
-                </li>
+              
 
                 <li>
                     <a id="sixthItem" href="/pages/comet_cadets.html">Comet Cadets</a>
@@ -72,8 +70,14 @@
            </div>
 
            <div class='grid_container'>
-             <div id='header_sec'>
-              <h2>This is the example header</h2>
+             <div class='header_sec'>
+              <h2>Our Space Neighbors</h2>
+              <p>
+              The most prominent members of the solar system are the eight planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. 
+              These planets vary in size, composition, and characteristics. 
+              <br>
+              Scroll down to check out what makes every planet so special!
+              </p>
              </div>
 
              <div class='sun_sec planet_sec'>
@@ -95,10 +99,13 @@
                      </div>
                      <div class='stats'>
                        <div class='stats_col_1'>
-                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quos ad beatae aperiam necessitatibus temporibus ut eligendi corrupti, reprehenderit vel molestias ipsam incidunt doloremque sapiente. Quod minus dolores non quas.</p>
+                          <p>
+                            Size: 864,000 miles <br>
+                            109x the size of Earth
+                          </p>
                        </div>
                        <div class='stats_col_2'>
-                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis facilis eligendi perferendis consectetur molestiae commodi, adipisci illo delectus unde voluptatem molestias voluptatibus qui tempora dignissimos totam soluta dolorum sapiente odio.</p>
+                          <p></p>
                        </div>
                      </div>
                    </div>
@@ -182,8 +189,8 @@
                      
                      
                    </div>
-                   <button class='next_button'>Next</button>       
-              </div>
+                       
+               </div>
                
              </div>
 
@@ -360,7 +367,7 @@
              </div>
 
              <div class='saturn_sec planet_sec'>
-                <img class='planet_bkgrd' src="../images/saturn_rings.jpg" alt="">
+                <img class='planet_bkgrd' src="../images/saturn_surface.png" alt="">
                 <p class='planet_main_title disappear'>Saturn's <span id='planet_div_title'>Stats</span></p>
 
                 <div class='planet_main'>
