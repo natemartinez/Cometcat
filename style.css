@@ -1,13 +1,13 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import "https://fonts.googleapis.com/css2?family=Aldrich&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap";
 
 
 body {
     font-family: 'Cairo', sans-serif;
     background: #fafafa;
 }
-
 
 p {
     font-family: 'Cairo', sans-serif;
@@ -16,11 +16,10 @@ p {
     line-height: 1.7em;
     color: white;
 }
-
 .grid_container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(25, 250px);
+    grid-template-rows: repeat(16, 250px);
 }
 .wallpaper{
     opacity: 0.5;
@@ -29,31 +28,26 @@ p {
     margin-bottom: 100px;
 }
 
-
 #header-banner{
     background-color: black;
 }
+.container-fluid{
+    padding: 0;
+    height: 20em;
+}
 #logo{
-    position: absolute;
-    top:-70px;
-    left: 32vw;
-    width: 22vw;
+    position: relative;
+    margin-top: -3em;
+    margin-left: 24em;
+    width: 17em;
     
 }
-
 .push{
     position: absolute;
     top:0px;
-    left: 5vw;
-    width: 22vw;
+    left: 6vw;
 }
 
-
-
-h1{
-    color:white;
-    margin: auto;
-}
 h2{
     color:white;
     margin:auto;
@@ -63,10 +57,10 @@ h2{
     transition: all .2s ease-in-out; 
 }
     
- .grow:hover { 
+.grow:hover { 
     transform: scale(1/2);
     cursor: pointer;   
- }
+}
 
 
 a,
@@ -115,20 +109,27 @@ span {
     display: inline-block;
 }
 
-
 #sidebar {
     min-width: 250px;
     max-width: 250px;
     background-color: #7386D5;
     color: #fff;
     transition: all 0.3s;
+    position: sticky;
+    top: 0;
+    height: 50em;
+    padding-right: 3em;
 }
 
 #sidebar.active {
+    position: absolute;
     min-width: 80px;
     max-width: 80px;
-    text-align: center;
+    font-size: 1em;
+    text-align: left;
+    margin-left: -5em;
 }
+
 
 #sidebar.active .sidebar-header h3,
 #sidebar.active .CTAs {
@@ -137,6 +138,14 @@ span {
 
 #sidebar.active .sidebar-header strong {
     display: block;
+}
+
+#sidebar ul{
+    font-size: 1.3em;
+}
+
+#sidebar li{
+    margin-top: 1em;
 }
 
 #sidebar ul li a {
@@ -173,7 +182,8 @@ span {
 #sidebar .sidebar-header {
     padding: 20px;
     background-color: black;
- 
+    height: 8em;
+    width: 16em;
 }
 
 
@@ -182,23 +192,20 @@ span {
     margin-left: 3em;
 }
 
-#firstItem:hover{
-    background: green;
+.ow_Item:hover{
+    background: rgb(10, 78, 10);
 }
-#secondItem:hover{
-    background: gray;
+.sn_Item:hover{
+    background: rgb(22, 22, 121);
 }
-#thirdItem:hover{
-    background: rgb(64, 195, 224);
+.ffa_Item:hover{
+    background:rgb(190, 1, 1) ;
 }
-#fourthItem:hover{
-    background: rgba(201, 186, 14, 0.975);
+.se_Item:hover{
+    background: rgba(211, 195, 20, 0.975);
 }
-#fifthItem:hover{
-    background: rgb(0, 60, 255);
-}
-#sixthItem:hover{
-    background: rgb(190, 1, 1);
+.cc_Item:hover{
+    background: rgb(198, 101, 35);
 }
 
 
@@ -281,7 +288,7 @@ a.article:hover {
     width: 100%;
     min-height: 100vh;
     transition: all 0.3s;
-    background: #828f9c;
+    background: #27292b;
     font-family: 'Cairo';
 }
 
@@ -295,55 +302,92 @@ a.article:hover {
 }
 
 #sidebarCollapse{
-    position: absolute;
-    z-index: 1;
     margin-top: 25px;
-   
+    animation: sidebar_back 0.2s forwards;
+    margin-bottom: 5em;
+    height: 5em;
+}
+#sidebarCollapse.active{
+    animation: sidebar_move 0.2s forwards;
 }
 
-#weather-container{
-    width: 900px;
-    height: 250px;
-    margin-top: -25em;
-    grid-row: 16/17;
-    grid-column: 1/13;
+@keyframes sidebar_move{
+    0%{
+       left: 13em;
+    }
+
+
+    100%{
+        left: 1em;
+    }
+}
+@keyframes sidebar_back{
+    100%{
+       left: 13em;
+    }
+
+
+    0%{
+        left: 1em;
+    }
 }
 
-#current-widget{
+.weather_box{
+    position: absolute;
+    top:1em;
+    right: 10em;
+    width: 16em;
+    height: 7em;
+    background-color:#47748b;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#cur_condition_icon img{
+    position: absolute;
+    top: 1.5em;
+    left: 1em;
+    margin-right: 1em;
+    width: 5em;
+}
+#cur_location{
+    margin: 0em;
+}
+#cur_weather{
+    width: fit-content;
+    position: absolute;
+    left: 8em;
+    top: 1.5em;
     text-align: center;
-    font-family: 'Cairo';
-    border-radius: 10px;
-    border: 2px rgb(96, 143, 196) solid;
-    height: 200px;
 }
-#current-widget img{
-    width: 100px;
-    float: left;
-    margin-top:15px;
-}
-#cur-degrees{
-    font-size: 30px;
-    font-family: 'Cairo';
+#cur_degrees{
+    margin: 0em;
+    font-size: 1.8em;
     font-weight: bold;
-    margin-top:20px;
-    margin-right:-20px;
 }
-#cur-condition{
-    margin-top: -10px;
-    font-size:20px;
-    font-family: 'Cairo';
-    margin-right: -5px;
+#cur_condition{
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
 }
 
-#forecast-header{
-    font-family:'Cairo';
+#forecast_box{
+    opacity: 0;
 }
-#forecast-widget{
-    border-radius: 10px;
-    border: 2px rgb(96, 143, 196) solid;
-    height: 200px;
+#forecast_box .header{
+    position: absolute;
+    top: 0;
+    font-size: 1em;
 }
-
+#forecast_info{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 9em;
+    column-gap: 0.8em;
+    padding: 1em 0.5em 1.5em 0.5em;
+}
 .temp{
     font-family: 'Cairo';
     font-size: 20px;
@@ -351,20 +395,57 @@ a.article:hover {
     margin-bottom:10px
 }
 
-.condition{
-    font-family:'Cairo';
-    font-size: 10px;
-    margin-top:-10px
-}
-
 .time{
     font-family:'Cairo';
     font-size: 12px;
     margin-top: -15px;
 }
-
 .icon img{
-    width: 50px;
+    width: 45px;
+}
+.forecast_hours{
+    position: relative;
+    text-align: center;
+}
+
+.disappear{
+    animation: fade_out 0.3s forwards;
+    animation-timing-function: ease-in;
+}
+.appear{
+    animation: fade_in 0.3s forwards;
+    animation-timing-function: ease-in;
+}
+@keyframes fade_out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fade_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#weather_btn{
+     background-color: transparent;
+     border: none;
+     position: absolute;
+     right: 0.2em;
+     top: 0.2em;
+     outline: none;
+}
+.btn_turn{
+    transform: rotate(180deg);
+}
+#weather_arrow{
+   width: 1.5em;
 }
 
 
@@ -377,34 +458,50 @@ a.article:hover {
     width: 100%;
     position: relative;
     z-index: 0;
-    filter: brightness(0.5);
+    filter: brightness(0.3);
+}
+.wp_move{
+    margin-top: 5em;
 }
 .intro_text{
     position: absolute;
-    left: 15em;
-    width: 20em;
-    top: 5em;
+    left: 23em;
+    width: 33em;
+    top: 20em;
     z-index: 1;
-    font-size: 1.4em;
+    font-size: 1em;
+    color: white;
 }
+.intro_text h1{
+    font-size: 3.5em;
+}
+
+
+.sidebar_move{
+    left: 12em;
+}
+.sidebar_move_img{
+    translate: -8em;
+}
+
 #comet{
     position: absolute;
     width: 10em;
-    right: 25em;
-    top: 10em;
+    right: 23em;
+    top: 12em;
 }
 #catOnShip{
     position: absolute;
     z-index: 1;
     width: 25em;
-    right: 9em;
-    top: 20em;
+    right: 7em;
+    top: 24em;
 }
 
 .article_section{
-    grid-row: 3/6;
+    grid-row: 3/7;
     grid-column: 2/12;
-    
+    padding-top: 5em;
 }
 .article_grid{
     position: relative;
@@ -415,34 +512,158 @@ a.article:hover {
     row-gap: 2em;
 }
 .header{ 
-    font-size: 2.5em;
+    font-size: 3em;
+    margin-bottom: 2em;
 }
 .article{
     height: 15em;
-    background-color: antiquewhite;
+    border-radius: 10px;
 }
+.article img{
+    border-radius: 10px;
+}
+
 #article_one{
     grid-column: 2/9;
     grid-row: 1/3;
-    
+
 }
+#article_one p{
+    position: absolute;
+    z-index: 3;
+    width: 10em;
+    text-align: center;
+    margin-left: 3em;
+    margin-top: 3em;
+}
+#article_one_bkgrd{
+    position: absolute;
+    width: 12em;
+    height: 11em;
+    margin-left: 2.7em;
+    margin-top: 1em;
+    z-index: 2;
+    background-color: royalblue;
+}
+#article_one_bkgrd2{
+    position: absolute;
+    width: 8em;
+    height: 9em;
+    z-index: 1;
+    background: transparent;
+    border: 2px solid lightsteelblue;
+    margin-top: 4em;
+    margin-left: 8em;
+}
+#telescope{
+    position: absolute;
+    width: 36.7em;
+    height: 15em;
+    z-index: 0;
+    top: 0;
+}
+.img_grow{
+    width: 38em;
+}
+
 #article_two{
     grid-column: 9/12;
     grid-row: 1/4;
     height: 32em;
 }
+#article_two p{     
+    position: absolute;
+    z-index: 2;
+    bottom: 4.5em;
+    margin-left: 2em;
+    width: 9em;
+    height: 6em;
+    background-color: purple;
+}
+#article_two_bkgrd{
+    position: absolute;
+    z-index: 1;
+    width: 8em;
+    height: 4em;
+    background-color: #27292b;
+    bottom: 5em;
+    margin-left: 1.5em;
+}
+#rocket_launch{
+    position: absolute;
+    z-index: 0;
+    width: 14.5em;
+    height: 32em;
+}
+
 #article_three{
     grid-row: 2;
-    grid-column: 6/9;
+    grid-column: 2/5;
 }
+#article_three_bkgrd{
+    background-color: #27292b;
+    width: 10em;
+    height: 6em;
+    position: absolute;
+    z-index: 0;
+    margin-top: 0.5em;
+    margin-left: 2.5em;
+}
+#article_three_bkgrd2{
+    background-color: orangered;
+    width: 10em;
+    height: 6em;
+    position: absolute;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+#article_three p{
+    position: absolute;
+    z-index: 1;
+    width: 9em;
+    margin-left: 2em;
+    margin-top: 1em;
+    text-align:center;
+}
+#black_hole{
+    width: 14.5em;
+    height: 15em;
+    margin-top: 0em;
+}
+
 #article_four{
     grid-row: 2;
-    grid-column: 2/6;
+    grid-column: 5/9;
+}
+#multi_verse{
+    width: 20em;
+    height: 15em;
+    position: absolute;
+    z-index: 0;
+}
+#article_four_bkgrd{
+    position: absolute;
+    background-color: #27292b;
+    width: 16em;
+    height: 2.5em;
+    margin-top: 9.5em;
+    margin-left: 1.5em;
+}
+#article_four p{
+    width: 15em;
+    height: 2.5em;
+    position: absolute;
+    padding-right: 1em;
+    bottom: 3em;
+    margin-left: 2em;
+    text-align: end;
+    z-index: 1;
+    background-color: darkslategray;
 }
 
 .rec_section{
     display: flex;
-    grid-row: 6/11;
+    grid-row: 7/12;
     grid-column: 1/13;
     flex-direction: column;
 }
@@ -453,10 +674,15 @@ a.article:hover {
     position: absolute;
     z-index: 1;
     width: 25em;
-    right: 8em;
+    right: 5em;
     text-align: right;
     margin-top: 5em;
     font-size: 1.3em;
+    color: white;
+}
+#rec_text h1{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
 }
 #planetCat{
     position: absolute;
@@ -471,6 +697,7 @@ a.article:hover {
     flex-direction: column;
     align-items: center;
     padding: 5em;
+    color: white;
 }
 
 #btn_section{
@@ -485,19 +712,73 @@ a.article:hover {
 
 .topic_btns{
     width: 20em;
-    height: 6em;
-    margin: 1em;
+    height: 7em;
+    margin: 2em;
     padding: 1.5em;
     border-radius: 10px;
     background-color: transparent;
+    border: 2px solid white;
+    
 }
 .topic_btns p{
     font-size: 1.5em;
 }
+.topic_btns:active{
+    transition: 3s forwards;
+    border: 2px solid #6d7fcc;
+}
+
+#one_left:hover {
+    background-color:red;
+    
+}
+#two_left:hover{
+  background-color: navy;
+}
+#three_left:hover{
+ background-color: yellow;
+}
+#one_right:hover{
+    background-color: darkgreen;
+}
+#two_right:hover{
+     background-color: yellow
+}
+#three_right:hover{
+    background-color: red;
+}
+
+
 
 .cta_section{
-    grid-row: 11/14;
+    grid-row: 13/15;
     grid-column: 1/13;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cta_section h1{
+    margin-bottom: 0.5em;
+}
+.cta_section p{
+    font-size: 1.5em;
+}
+.cta_section button{
+    width: 5em;
+    font-size: 2.5em;
+    border-radius: 10px;
+    background-color: #6d7fcc;
+    color: white;
+    margin-top: 1em;
+}
+#cta_box{
+    width: 50em;
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    height: 26em;
+    padding: 3em;
 }
 
 @media (max-width: 768px) {
@@ -554,51 +835,29 @@ a.article:hover {
     .wallpaper{
         height: 7em;
     }
-    #logo{
-        width: 200px;
-        top:-2em;
-        left: 19em;
-    }
-     #logo.push{
-        left:15em
-    }
     
-
     
 }
 
-@media(min-width:769px){
+@media(max-width:769px){
     #header-banner{
         height:8em
     }
-
     .wallpaper{
         height:8em
     }
-
-    #logo{
-        width: 225px;
-        top:-2em;
-        left: 10em;
-    }
-    #logo.push{
-        
-    }
-
-
-
-
     .block{
         margin:20px 0;
     }
     .line{
         margin: 15px 0;
     }
+
+    .intro_text{
+        left: 10em;
+    }
 }
 
 @media(min-width:1024px) {
-    #logo{
-        width: 13em;
-    }
 
 }

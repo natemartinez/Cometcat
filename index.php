@@ -1,4 +1,6 @@
+<?php
 
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,68 +20,127 @@
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar">
-         <div class="sidebar-header"></div>
-          <ul class="list-unstyled components">
-                
+        <nav id="sidebar">                
+         <div class="sidebar-header"><p>Log in here</p></div>
+          <ul class="list-unstyled components">             
               <li class="active">
                 <a href="#">Home</a>
               </li>
               <li>
-                <a id="firstItem" href="pages/our_world.php">Our World</a>
+                <a class='ow_Item' href="pages/our_world.php">Our World</a>
               </li>
               <li>
-                <a id="secondItem" href="/pages/space_neighbors.html">Our Space Neighbors</a>    
-              </li>
-
-              <li>
-                <a id="thirdItem" href="">Far Far Away</a>
+                <a class="sn_Item" href="/pages/space_neighbors.html">Our Space Neighbors</a>    
               </li>
 
               <li>
-                <a id="fourthItem" href="/pages/explorers.html">Space Explorers</a>
+                <a class="ffa_Item" href="">Far Far Away</a>
               </li>
 
               <li>
-                <a id="fifthItem" href="/pages/gadgets_tech.html">Gadgets & Tech</a>
+                <a class="se_Item" href="/pages/explorers.html">Space Explorers</a>
               </li>
 
               <li>
-                <a id="sixthItem" href="/pages/comet_cadets.html">Comet Cadets</a>
+                <a class="cc_Item" href="/pages/comet_cadets.html">Comet Cadets</a>
               </li>
           </ul>
+          
         </nav>
 
       
         <div id="content">
              <header id='header-banner'class="container-fluid" style="position:relative;">
-              <button type="button" id="sidebarCollapse" class="btn btn-info" title="toggle_sidebar">
-               <i class="fas fa-align-left"></i>   
-              </button>
-              <div class="header-logo logo-grow"><img src="images/logo.png" alt="cat jumping over words" id="logo"></div>
-             </header>
+             <button type="button" id="sidebarCollapse" class="btn btn-info" title="toggle_sidebar">
+              <i class="fas fa-align-left"></i>   
+             </button>
+              <img src="images/logo.png" alt="cat jumping over words" id="logo">
+              <div class='weather_box'>
+                <div id='current_info' class='appear'>
+                  <p id='cur_location' class='text-center'></p>
+                  <div id="cur_condition_icon">
+                  </div>
+                    <div id='cur_weather'>
+                     <p id="cur_degrees"></p>
+                     <p id="cur_condition"></p>
+                    </div>
+                </div>
+                 
+               <button id='weather_btn'><img id='weather_arrow' src="images/planet_menu_arrow.png" alt=""></button>
+               <div id='forecast_box'>
+                 
+                  <div id='forecast_info'>
+                   <div class='forecast_hours' id="first_hour">
+                    <div class='icon' id="icon_one"></div>
+                    <p class='temp' id='temp_one'></p>
+                    <p class='time' id='hour_one'></p>
+                   </div>
+                   <div class='forecast_hours'  id="second_hour">
+                    <div class='icon' id="icon_two"></div>
+                    <p class='temp' id='temp_two'></p>
+                    <p class='time' id='hour_two'></p>
+                   </div>                
+                   <div class='forecast_hours'  id="third_hour">
+                    <div class='icon' id="icon_three"></div>
+                    <p class='temp' id='temp_three'></p>
+                    <p class='time' id='hour_three'></p>
+                   </div>              
+                   <div class='forecast_hours'  id="fourth_hour">
+                    <div class='icon' id="icon_four"></div>
+                    <p class='temp' id='temp_four'></p>
+                    <p class='time' id='hour_four'></p>
+                   </div>                    
+                  </div>
+
+               </div> 
+
+              </div>
+ 
+            </header>
 
              <div class='grid_container'>
                <div class='intro_section'>
                  <img class='star_wp' src="images/space_long.jpg" alt="">
                   <div class='intro_text'>
-                    <p class='header'>Welcome to the CometCat!</p>
+                    <h1>Welcome to CometCat</h1>
                     <p>
                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint sunt fuga sit voluptas aspernatur officia enim alias possimus unde laborum,
                      aliquam non expedita quas obcaecati porro est nostrum! Dolorum, tempore.
                     </p>
                   </div>
-                  <img id='comet' src="images/comet.png" alt="">
-                  <img id='catOnShip' src="images/catOnSpaceship.png" alt="">                
+                
+                    <img id='comet' src="images/comet.png" alt="">
+                    <img id='catOnShip' src="images/catOnSpaceship.png" alt=""> 
+                                 
                </div>
 
                <div class='article_section'>
-                <p class='header'>Featured Articles</p>
+                <p class='header text-center'>Featured Articles</p>
                 <div class='article_grid'>
-                  <div class='article' id='article_one'><div></div></div>
-                  <div class='article' id='article_two'><div></div></div>
-                  <div class='article' id='article_three'><div></div></div>
-                  <div class='article' id='article_four'><div></div></div>
+                  <div class='article' id='article_one'>
+                    <div id='article_one_bkgrd'></div>
+                    <div id='article_one_bkgrd2'></div>
+                    <p>Search for life: World's most powerful telescopes</p>
+                    <img id='telescope' src="images/telescope_sky.jpg" alt="">
+                  </div>
+
+                  <div class='article' id='article_two'>
+                    <p>The first rocket</p>
+                    <div id='article_two_bkgrd'></div>
+                    <img id='rocket_launch' src="images/rocket_launch.jpg" alt="">
+                  </div>
+                  <div class='article' id='article_three'>
+                    <div id='article_three_bkgrd'></div>
+                    <div id='article_three_bkgrd2'></div>
+                    <p>How does <br> black holes work?</p>
+                    <img id='black_hole' src="images/black_hole.png" alt="">
+                  </div>
+                  <div class='article' id='article_four'> 
+                    <img id='multi_verse' src="images/multi_verse.jpg" alt="">
+                    <p>The Multiverse Theory</p> 
+                    <div id='article_four_bkgrd'></div> 
+                       
+                  </div>
                 </div>
                 
                </div>
@@ -88,71 +149,33 @@
                   <img id='rec_wp' class='star_wp' src="images/space_long.jpg" alt="">
                   <img id='planetCat' src="images/planetCat.png" alt="">  
                   <div id='rec_text'>
-                    <p id='rec_header'>There's so much to see out there</p>
+                    <h1>There's so much to see out there</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quisquam impedit asperiores earum rerum aliquid autem veritatis tempore, unde velit nam repudiandae voluptatem laboriosam incidunt voluptates vero obcaecati perspiciatis cumque.</p>
                   </div>
                  <div id='rec_topics'>
-                  <p class='header'>Here are some recommended topics</p>
-                  <div id='btn_section'>
+                   <h1 class='header'>Here are some recommended topics</h1>
+                   <div id='btn_section'>
+                     <div>
+                      <a id='one_left' href="pages/ff_away.php" class='topic_btns'><p>Supernovas</p></a>
+                      <a id='two_left' href="pages/space_neighbors.php" class='topic_btns'><p>The Solar System</p></a>
+                      <a id='three_left' href="pages/space_explorers.php" class='topic_btns'><p>Albert Einstein</p></a>
+                     </div>
                     <div>
-                      <button class='topic_btns'><p>Supernovas</p></button>
-                      <button class='topic_btns'><p>The Solar System</p></button>
-                      <button class='topic_btns'><p>Albert Einstein</p></button>
-                    </div>
-                    <div>
-                      <button class='topic_btns'><p>Fun facts about Earth</p></button>
-                      <button class='topic_btns'><p>First Man on the Moon</p></button>
-                      <button class='topic_btns'><p>The Milky Way</p></button>                      
+                      <a id='one_right' class='topic_btns' href="pages/our_world.php" ><p>Fun facts about Earth</p></a>
+                      <a id='two_right' class='topic_btns' href="pages/space_explorers.php"><p>First Man on the Moon</p></a>
+                      <a id='three_right' class='topic_btns' href="pages/ff_away.php"><p>The Milky Way</p></a>                      
                     </div>
 
-                  </div>
+                   </div>
                  </div>
                </div>
 
                <div class='cta_section'>
-          
-               </div>
-
-               <div class='row d-flex mx-auto'id="weather-container">  
-                  <div class='col-md-4 bg-dark weather-widget mt-5' id='current-widget'>
-                  <h3 class="text-center mt-3 text-white">Current</h3>
-                  <div id="cur-condition-img"></div>
-                  <p id="cur-degrees"></p>
-                  <p id="cur-condition"></p>
-                  </div>
-               
-                  <div class='col-md-1'></div>   
-                  <div class='col-md-7 bg-dark weather-widget mt-5' id='forecast-widget'>
-                   <h3 class="text-center mt-3 text-white" id="forecast-header" >Hourly Forecast</h3>
-                  <div class='row' id="forecast-pockets">
-                   <div class='col-sm-3'>
-                   <div class='icon' id="icon-one"></div>
-                   <p class='temp' id='temp-one'></p>
-                   <p class='condition' id='condition-one'></p>
-                   <p class='time' id='hour-one'></p>
-                   </div>
-                   <div class='col-sm-3'>
-                   <div class='icon' id="icon-two"></div>
-                   <p class='temp' id='temp-two'></p>
-                   <p class='condition' id='condition-two'></p>
-                   <p class='time' id='hour-two'></p>
-                   </div>
-                   <div class='col-sm-3'>
-                   <div class='icon' id="icon-three"></div>
-                   <p class='temp' id='temp-three'></p>
-                   <p class='condition' id='condition-three'></p>
-                   <p class='time' id='hour-three'></p>
-                   </div>
-                   <div class='col-sm-3'>
-                   <div class='icon' id="icon-four"></div>
-                   <p class='temp' id='temp-four'></p>
-                   <p class='condition' id='condition-four'></p>
-                   <p class='time' id='hour-four'></p>
-                   </div>
-                 </div>
-                 </div>
-                 <div class='col-md-1'></div>
-                 </div>
+                <div id='cta_box'>
+                  <h1 class='header'>Join the Comet Cadets newsletter</h1>
+                  <p>Receive current news, fun facts, and other fascinating <br> content every week!</p>               
+                  <button>Join</button>                  
+                </div>                  
                </div>
 
                <div class="container">
@@ -227,7 +250,3 @@
 </body>
 </html>
 
-<?php
-  
-
-?>

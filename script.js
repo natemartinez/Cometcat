@@ -2,16 +2,25 @@ const api = '7f9751cf98a049dd805170718232803';
 $(document).ready(function() {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
+        $('#sidebarCollapse').toggleClass('active');
         $('#logo').toggleClass('push');
         $('.earth-container').toggleClass('move');
+        $('.intro_text').toggleClass('sidebar_move');
+        $('#comet').toggleClass('sidebar_move_img');
+        $('#catOnShip').toggleClass('sidebar_move_img');
+        $('#planetCat').toggleClass('sidebar_move_img');
+        $('#rec_text').toggleClass('sidebar_move_img');
+        $('#telescope').css('width', '40em');
+
     });
     let lat;
     let long;
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position) => {
+          
             lat = position.coords.latitude;
             long = position.coords.longitude;
-            console.log(lat, long);
+            
           const base = 'http://api.weatherapi.com/v1/forecast.json?key=7f9751cf98a049dd805170718232803&q=' + lat + ',' + long + 
          '&days=5&aqi=no&alerts=no';  
           let currentWeek;
@@ -22,6 +31,7 @@ $(document).ready(function() {
           })
            .then(function(data) {
             currentWeek = data;
+            
              return fetch('weather_conditions.json', {
              method: 'GET',
             });
@@ -37,9 +47,8 @@ $(document).ready(function() {
               let curCode = current.condition.code;
               let conditionNow;
               let conditionNowIcon;
-              let conditionImg = new Image();
-              
-              
+              let conditionImg = new Image();             
+              let location = data.location.name + ', ' + data.location.region;
               //if it's daytime, then show nighttime icon
               if(currentHour > 6 && currentHour < 20){
                 for(let i=0; i<conditions.length;i++){
@@ -59,10 +68,11 @@ $(document).ready(function() {
                   }
                 }
               }
-              
-              $('#cur-condition-img').append(conditionImg);
-              $('#cur-condition').append(conditionNow);
-              $('#cur-degrees').append(degrees + '°');
+
+              $('#cur_location').append(location)
+              $('#cur_condition_icon').append(conditionImg);
+              $('#cur_condition').append(conditionNow);
+              $('#cur_degrees').append(degrees + '°');
 
               displayForecast(conditions, data)
             };
@@ -109,25 +119,25 @@ $(document).ready(function() {
               console.log(hourlyTempArr)
 
               //Try to D.R.Y, put them in a function with each spot as an argument
-              $('#hour-one').append(hourlyTempArr[0].time);
-              $('#temp-one').append(hourlyTempArr[0].temp);
-              $('#condition-one').append(hourlyTempArr[0].condition);
-              $('#icon-one').append(hourlyTempArr[0].icon);
+              $('#hour_one').append(hourlyTempArr[0].time);
+              $('#temp_one').append(hourlyTempArr[0].temp);
+              $('#condition_one').append(hourlyTempArr[0].condition);
+              $('#icon_one').append(hourlyTempArr[0].icon);
 
-              $('#hour-two').append(hourlyTempArr[1].time);
-              $('#temp-two').append(hourlyTempArr[1].temp);
-              $('#condition-two').append(hourlyTempArr[1].condition);
-              $('#icon-two').append(hourlyTempArr[1].icon);
+              $('#hour_two').append(hourlyTempArr[1].time);
+              $('#temp_two').append(hourlyTempArr[1].temp);
+              $('#condition_two').append(hourlyTempArr[1].condition);
+              $('#icon_two').append(hourlyTempArr[1].icon);
 
-              $('#hour-three').append(hourlyTempArr[2].time);
-              $('#temp-three').append(hourlyTempArr[2].temp);
-              $('#condition-three').append(hourlyTempArr[2].condition);
-              $('#icon-three').append(hourlyTempArr[2].icon);
+              $('#hour_three').append(hourlyTempArr[2].time);
+              $('#temp_three').append(hourlyTempArr[2].temp);
+              $('#condition_three').append(hourlyTempArr[2].condition);
+              $('#icon_three').append(hourlyTempArr[2].icon);
 
-              $('#hour-four').append(hourlyTempArr[3].time);
-              $('#temp-four').append(hourlyTempArr[3].temp);
-              $('#condition-four').append(hourlyTempArr[3].condition);
-              $('#icon-four').append(hourlyTempArr[3].icon);
+              $('#hour_four').append(hourlyTempArr[3].time);
+              $('#temp_four').append(hourlyTempArr[3].temp);
+              $('#condition_four').append(hourlyTempArr[3].condition);
+              $('#icon_four').append(hourlyTempArr[3].icon);
             };
 
        });
@@ -146,6 +156,11 @@ $(document).ready(function() {
     $(this).toggleClass('btn_fade btn_move');
   });
 
+  $('#weather_btn').on('click', function(){
+      $(this).toggleClass('btn_turn');
+      let weather_content = $(this).siblings();
+      weather_content.toggleClass('disappear appear');
+  });
 
   var slides = $('.slide');
   var nextButton = $('.next_button');
