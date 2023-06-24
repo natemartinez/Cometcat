@@ -1,5 +1,24 @@
 <?php
 
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "cometcat";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if (!$conn) {
+ die("Connection failed: " . mysqli_connect_error());
+}
+
+$query = "SELECT * FROM users";
+
+if($result = mysqli_query($conn, $query)) {
+  $row = mysqli_fetch_array($result);
+
+  print_r($row);
+};
+
 ?>
 <!DOCTYPE html>
 <html>
