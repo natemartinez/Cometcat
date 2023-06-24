@@ -504,7 +504,7 @@ a.article:hover {
 .stats_div{
     display: flex;
     position: relative;
-    margin-top: 10em;
+    margin-top: 8em;
     margin-left: 3em;
     
 }
@@ -517,7 +517,9 @@ a.article:hover {
 }
 .stats{
     display: flex;
+    column-gap: 10em;
 }
+
 
 .ff_div{
     display: flex;

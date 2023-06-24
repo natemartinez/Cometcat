@@ -85,8 +85,8 @@
             <div class='info_div'>
               <div class='info_bkgrd'></div>
               <p id='info_div_text'>This is the example of a header</p>
-              <div class='info_cards' id='card_one'></div>
-              <div class='info_cards' id='card_two'></div>
+              <div class='info_cards' id='card_one'>Supernovas</div>
+              <div class='info_cards' id='card_two'>Asteroids</div>
               <div class='info_cards' id='card_three'></div>
               <div class='info_cards' id='card_four'></div>
               

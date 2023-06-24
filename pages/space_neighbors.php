@@ -100,12 +100,43 @@
                      <div class='stats'>
                        <div class='stats_col_1'>
                           <p>
-                            Size: 864,000 miles <br>
-                            109x the size of Earth
+                            Size: 864,000 mi
+                            <br>
+                            &#40; 109x Earth's size &#41;
+                          </p> 
+                          <p>
+                            What it's made of:  
+                            <br>
+                            ~74.9% Hydrogen
+                            <br>
+                            ~23.8% Helium
+                            <br>
+                            ~1.3% Oxygen, Carbon
+                          </p> 
+                          <p>
+                            Moons: 0
                           </p>
                        </div>
                        <div class='stats_col_2'>
-                          <p></p>
+                          <p>
+                           Age: ~4.6 billion years
+                          </p>
+                          <p>
+                           Temperature: 27 million degrees F
+                          </p>
+                          <p>
+                           Gravity: 274 m/s &#178;
+                           <br>
+                           &#40; 28x Earth's gravity &#41;
+                          </p>
+                          <p>
+                           Distance to Earth: 92.96 million mi
+                          </p>
+
+                          <p>
+                            Name Origin: Old English - "sunne"
+                          </p>
+
                        </div>
                      </div>
                    </div>
@@ -113,7 +144,7 @@
                      <img id='ff_img' src="../images/wormhole.jpg" alt="">
                      <div class='ff_text'>
                       <h1>This is the example title</h1>
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum a vitae nisi! Sunt ullam soluta reiciendis, et sed libero corporis facilis reprehenderit, dolor dignissimos nisi iste maiores tempore natus eaque!</p>
+                      
                      </div>
                    </div>      
                    <div class='slide ff_div'>
