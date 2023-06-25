@@ -9,6 +9,10 @@ body {
     background: #fafafa;
 }
 
+.footer{
+    grid-row: 16/18;
+    grid-column: 1/13;
+}
 p {
     font-family: 'Cairo', sans-serif;
     font-size: 1.1em;
@@ -178,14 +182,12 @@ span {
     transform: translateX(50%);
 }
 
-
 #sidebar .sidebar-header {
     padding: 20px;
     background-color: black;
     height: 8em;
     width: 16em;
 }
-
 
 #logo.shrink{
     width: 75px;
@@ -440,12 +442,62 @@ a.article:hover {
      right: 0.2em;
      top: 0.2em;
      outline: none;
+     z-index: 2;
 }
 .btn_turn{
     transform: rotate(180deg);
 }
 #weather_arrow{
    width: 1.5em;
+}
+
+#signup_bkgrd{
+    position: fixed;
+    z-index: 4;
+    top: 0em;
+    left: 0em;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(39, 39, 56);
+    padding: 5em 10em 10em 15em;
+    display: none;
+}
+#signup_form{
+    width: 60vw;
+    height: 75vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 2em;
+}
+.error{
+    color: #6d7fcc;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none; 
+}
+  
+#profile{
+    position: absolute;
+    z-index: 4;
+    display: none;
+    width: 60vw;
+    height: 75vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 2em;
+
 }
 
 

@@ -1,18 +1,6 @@
 const api = '7f9751cf98a049dd805170718232803';
 $(document).ready(function() {
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $('#sidebarCollapse').toggleClass('active');
-        $('#logo').toggleClass('push');
-        $('.earth-container').toggleClass('move');
-        $('.intro_text').toggleClass('sidebar_move');
-        $('#comet').toggleClass('sidebar_move_img');
-        $('#catOnShip').toggleClass('sidebar_move_img');
-        $('#planetCat').toggleClass('sidebar_move_img');
-        $('#rec_text').toggleClass('sidebar_move_img');
-        $('#telescope').css('width', '40em');
-
-    });
+// weather geolocation
     let lat;
     let long;
     if(navigator.geolocation){
@@ -142,6 +130,21 @@ $(document).ready(function() {
 
        });
     };
+   
+  
+  $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('#sidebarCollapse').toggleClass('active');
+        $('#logo').toggleClass('push');
+        $('.earth-container').toggleClass('move');
+        $('.intro_text').toggleClass('sidebar_move');
+        $('#comet').toggleClass('sidebar_move_img');
+        $('#catOnShip').toggleClass('sidebar_move_img');
+        $('#planetCat').toggleClass('sidebar_move_img');
+        $('#rec_text').toggleClass('sidebar_move_img');
+        $('#telescope').css('width', '40em');
+
+    });
 
   $('.planet_menu_btn').on('click', function(){
     let background = $(this).siblings('img'); 
@@ -162,10 +165,20 @@ $(document).ready(function() {
       weather_content.toggleClass('disappear appear');
   });
 
+  var signupModel = document.getElementById('signup_bkgrd');
+  var profileModel = document.getElementById('profile');
+
+   window.onclick = function(event) {
+    if (event.target == signupModel || event.target == profileModel) {
+        signupModel.style.display = "none";
+        profileModel.style.display = "none";
+    }
+}
+
+//Space Neighbors page functionality
   var slides = $('.slide');
   var nextButton = $('.next_button');
   var currentSlide = 0; 
-
   nextButton.click(function() {
     let parent = $(this).parent();
     let div = $(this).parents('.planet_sec');
@@ -184,14 +197,49 @@ $(document).ready(function() {
       divTitle.text('Stats') 
     };
   });
-
   function showSlide(index,location) {
     location.removeClass('active');
     location.eq(index).addClass('active');
   }
 
+  //client-side profile verification
+const form = document.getElementById('form');  
+const emailInput = document.getElementById('email_input');
+const emailErr = document.getElementById('email_err');
+const pswdInput = document.getElementById('pswd_input');
+const pswdErr = document.getElementById('pswd_err');
 
-  // First, we're going to take the index of the slides
-  // Afterwards, we can take it and output the slides without [0]
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  const email = emailInput.value;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  const pswd = pswdInput.value;
+  const pswdPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+  const pswdErrMsg = `
+        <strong>Password must contain:<strong>
+        <ul>
+          <li>At least 8 characters</li>
+          <li>Uppercase</li>
+          <li>Lowercase</li>
+        </ul>
+      `
+
+  if (!emailPattern.test(email)) {
+    // Display an error message or apply a visual indicator
+    emailErr.innerText = 'Invalid email';
+    return;
+  }
+  if (!pswdPattern.test(pswd)) {
+    // Display an error message or apply a visual indicator
+    pswdErr.innerHTML = pswdErrMsg;
+    return;
+  }
+
+  // If the email is valid, you can proceed with form submission
+  form.submit();
+});
   
 });
