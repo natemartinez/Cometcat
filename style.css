@@ -7,6 +7,7 @@
 body {
     font-family: 'Cairo', sans-serif;
     background: #fafafa;
+    overflow-x: hidden;
 }
 
 .footer{
@@ -338,7 +339,7 @@ a.article:hover {
     position: absolute;
     top:1em;
     right: 10em;
-    width: 16em;
+    width: 17vw;
     height: 7em;
     background-color:#47748b;
     border-radius: 10px;
@@ -451,6 +452,15 @@ a.article:hover {
    width: 1.5em;
 }
 
+.form_links{
+    background-color: #6d7fcc;
+    color: white;
+    border-radius: 10px;
+    width: 5em;
+    height: 2.5em;
+    margin: 0.7em;    
+}
+
 #signup_bkgrd{
     position: fixed;
     z-index: 4;
@@ -465,6 +475,25 @@ a.article:hover {
 }
 #signup_form{
     width: 60vw;
+    height: 80vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 2em;
+}
+#login_bkgrd{
+    position: fixed;
+    z-index: 4;
+    top: 0em;
+    left: 0em;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(39, 39, 56);
+    padding: 5em 10em 10em 15em;
+    display: none;    
+}
+#login_form{
+    width: 60vw;
     height: 75vh;
     background-color: aliceblue;
     border-radius: 10px;
@@ -473,6 +502,16 @@ a.article:hover {
 .error{
     color: #6d7fcc;
 }
+.success{
+    color: #6d7fcc;
+}
+#pswd_err{
+    color: #6d7fcc;
+}
+#email_err{
+    color: #6d7fcc;
+}
+
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -490,6 +529,7 @@ input[type=text]:focus, input[type=password]:focus {
   
 #profile{
     position: absolute;
+    top: 10em;
     z-index: 4;
     display: none;
     width: 60vw;
@@ -507,7 +547,8 @@ input[type=text]:focus, input[type=password]:focus {
     grid-column: 1/13;
 }
 .star_wp{
-    width: 100%;
+    width: 100vw;
+    height: 30em;
     position: relative;
     z-index: 0;
     filter: brightness(0.3);
@@ -518,8 +559,8 @@ input[type=text]:focus, input[type=password]:focus {
 .intro_text{
     position: absolute;
     left: 23em;
-    width: 33em;
-    top: 20em;
+    width: 33vw;
+    top: 15em;
     z-index: 1;
     font-size: 1em;
     color: white;
@@ -533,22 +574,15 @@ input[type=text]:focus, input[type=password]:focus {
     left: 12em;
 }
 .sidebar_move_img{
-    translate: -8em;
+    transform: translate(-8em);
 }
 
-#comet{
+#cometCat_intro{
     position: absolute;
-    width: 10em;
-    right: 23em;
-    top: 12em;
-}
-#catOnShip{
-    position: absolute;
-    z-index: 1;
+    right: 10em;
     width: 25em;
-    right: 7em;
-    top: 24em;
 }
+
 
 .article_section{
     grid-row: 3/7;
@@ -609,7 +643,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 #telescope{
     position: absolute;
-    width: 36.7em;
+    width: 39vw;
     height: 15em;
     z-index: 0;
     top: 0;
@@ -644,7 +678,7 @@ input[type=text]:focus, input[type=password]:focus {
 #rocket_launch{
     position: absolute;
     z-index: 0;
-    width: 14.5em;
+    width: 15vw;
     height: 32em;
 }
 
@@ -678,7 +712,7 @@ input[type=text]:focus, input[type=password]:focus {
     text-align:center;
 }
 #black_hole{
-    width: 14.5em;
+    width: 15vw;
     height: 15em;
     margin-top: 0em;
 }
@@ -688,7 +722,7 @@ input[type=text]:focus, input[type=password]:focus {
     grid-column: 5/9;
 }
 #multi_verse{
-    width: 20em;
+    width: 22vw;
     height: 15em;
     position: absolute;
     z-index: 0;
@@ -710,7 +744,6 @@ input[type=text]:focus, input[type=password]:focus {
     margin-left: 2em;
     text-align: end;
     z-index: 1;
-    background-color: darkslategray;
 }
 
 .rec_section{
@@ -833,7 +866,248 @@ input[type=text]:focus, input[type=password]:focus {
     padding: 3em;
 }
 
-@media (max-width: 768px) {
+@media(max-width:426px){
+    
+    #logo{
+        position: relative;
+        margin-top: 0em;
+        margin-left: 2em;
+        width: 14em;
+    }
+
+    #weather_btn{
+        display: none;
+    }
+    #cur_location{
+        display: none;
+    }
+    #cur_condition{
+        display: none;
+    }
+    #cur_condition_icon img{
+        width: 2.5em;
+        top: 0.6em;
+        left: 0.2em;
+    }
+    #cur_weather{
+        left: 3em;
+        top: 1em;
+    }
+    #cur_degrees{
+        font-size: 1.1em;
+    }
+
+    .weather_box{
+        top: 0.5em;
+        right: 0.5em;
+        width: 5.5em;
+        height: 3em;
+    }
+
+
+    .grid_container{
+        grid-template-rows: repeat(14, 250px);
+    }
+    .intro_text{
+        width: 100%;
+        font-size: 0.9em;
+        margin-left: 1em;
+        padding: 1em;
+        text-align: center;
+    }
+    .intro_text h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    #cometCat_intro{
+        position: absolute;
+        right: -15em;
+        width: 17em;
+        margin-top: 14em;
+    }   
+    .sidebar_move{
+        left: 0em;
+    }
+    .sidebar_move_img{
+        transform: translate(-19em);
+    } 
+    
+    .article_grid{
+        column-gap: 0em;
+        row-gap: 0em;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(14, 1fr);
+    }
+    
+    #telescope{
+        width: 75vw;
+        height: 12em;
+    }
+    #article_one_bkgrd{
+        width: 8em;
+        height: 8em;
+        margin-left: 1em;
+        margin-top: 1em;
+    }
+    #article_one_bkgrd2{
+        width: 8em;
+        height: 8em;
+        margin-top: 2em;
+        margin-left: 0.4em;
+    }
+    #article_one p{
+        margin-left: 1.5em;
+        margin-top: 2em;
+        font-size: 1em;
+        width: 7em;
+    }
+
+    #rocket_launch{
+        margin-top: 15em;
+        height: 19em;
+        width: 8.5em;
+    }
+    #article_two p{
+        bottom: 10.5em;
+        width: 5em;
+        height: 5em;
+    }
+    #article_two_bkgrd{
+        width: 3em;
+        height: 4em;
+        bottom: 12em;
+    }
+
+
+    #black_hole{
+        width: 9em;
+        height: 11em;
+        margin-top: -2em;
+    }
+    #article_three p{
+        margin-top: 0em;
+        margin-left: 1em;
+        font-size: 0.8em;
+    }
+    #article_three_bkgrd{
+        width: 6em;
+        height: 3em;
+        margin-top: -1.5em;
+        margin-left: 0.5em;
+    }
+    #article_three_bkgrd2{
+        width: 7em;
+        height: 4em;
+        margin-top: -1em;
+        margin-left: 1em;
+    }
+
+    #multi_verse{
+        width: 9em;
+        height: 12em;
+        position: relative;
+        margin-top: 10em;
+        margin-left: -4.5em;
+    }
+    #article_four p{
+        margin-left: -2.5em;
+        bottom: 11em;
+        width: 6em;
+        z-index: 3;
+        font-size: 0.9em;
+        text-align: center;
+    }
+    #article_four_bkgrd{
+        width: 7em;
+        height: 1.5em;
+        margin-top: -6em;
+        margin-left: -3em;
+    }
+    #article_four_bkgrd2{
+        width: 7em;
+        height: 5em;
+        margin-left: -3.5em;
+        margin-top: -5.5em;
+        position: absolute;
+        z-index: 2;
+        background-color: #47748b;
+    }
+
+    .rec_section{
+        grid-row:7/11;
+    }
+    #rec_wp{
+        position: absolute;
+        height: 20em;
+    }
+    #planetCat{
+        position: relative;
+        width: 10em;
+        left: 1em;
+        top: 5em;
+        margin-top: 0em;
+    }
+    #rec_text{
+        position: relative;
+        width: 20em;
+        right:-20em;
+        top: -15em;
+        font-size: 0.6em;
+    }
+
+    #rec_topics{
+        padding: 0em;
+    }
+    #rec_topics .header{
+        font-size: 2em;
+        text-align: center;
+    }
+    .topic_btns{
+        width: 9em;
+        height: 5em;
+        margin: 0em 1em 4em 1em;
+        padding: 1em;
+
+    }
+    .topic_btns p{
+        font-size: 1em;
+    }
+
+
+    .cta_section{
+        grid-row: 11/13;
+    }
+    #cta_box{
+        width: 100%;
+    }
+    #cta_box .header{
+        font-size: 2em;
+    }
+
+
+    .footer{
+        grid-row: 13/14;
+    }
+
+}
+
+@media(max-width:600px) and (min-width:426px){
+
+    
+    .intro_text{
+        width: 100%;
+        font-size: 0.9em;
+        margin-left: 1em;
+
+    }
+    .intro_text h1{
+        font-size: 2em;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
     #sidebar {
         min-width: 80px;
         max-width: 80px;
@@ -887,29 +1161,85 @@ input[type=text]:focus, input[type=password]:focus {
     .wallpaper{
         height: 7em;
     }
-    
+
+    .sidebar_move{
+        left: 10em;
+    }
+    .intro_text{
+        left: 4em;
+        top: 10em;
+        width: 40vw;
+
+    }
+    .intro_text h1{
+        font-size: 6.5vw;
+    }
+
+    #cometCat_intro{
+        width: 45vw;
+        right: 0em;
+        margin-top: 3em;
+    }
     
 }
 
-@media(max-width:769px){
-    #header-banner{
-        height:8em
+@media(max-width:1050px) and (min-width:769px){
+    .intro_text{
+        font-size: 1em;
+        left: 20em;
     }
-    .wallpaper{
-        height:8em
-    }
-    .block{
-        margin:20px 0;
-    }
-    .line{
-        margin: 15px 0;
+    .intro_text h1{
+        font-size: 2.5em;
     }
 
+    .sidebar_move{
+        left: 7em;
+    }
+    .sidebar_move_img{
+        transform: translate(1em);
+    }
+
+    #cometCat_intro{
+        position: absolute;
+        right: -1em;
+        width: 30vw;
+        margin-top: 6em;
+    }
+
+    #planetCat{
+        width:20vw;
+    }
+}
+
+@media(max-width:1250px) and (min-width:1051px){
+    #rec_text{
+        width: 35vw;
+        font-size: 1.7vw;
+    }
+    #cometCat_intro{
+        position: absolute;
+        width: 22em;
+        right: 0em;
+        margin-top: 4em;
+    }
     .intro_text{
+        left: 23em;
+    }
+    .sidebar_move{
         left: 10em;
     }
 }
 
-@media(min-width:1024px) {
+@media(max-width:1450px)and (min-width:1251px) {
 
+    #cometCat_intro{
+        position: absolute;
+        width: 25em;
+        right: 5em;
+    }
+
+    #rec_text{
+        right: 3em;
+    }
 }
+

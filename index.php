@@ -1,70 +1,7 @@
 <?php    
-session_start();
+ session_start();
 
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "cometcat";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
- die("Connection failed: " . mysqli_connect_error());
-}
-
-$query = "SELECT * FROM users";
-
-$nameErr = $emailErr = $passwordErr = "";
-$name = $email = $password = "";
-$errors = array();
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-      $errors[] = "Only letters and white space allowed";
-    }
-  }
-  
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $errors[] = "Invalid Email";
-    }  
-  }
-    
-  if (empty($_POST["password"])) {
-    $passwordErr = "Password is required";
-  } else {
-    $password = test_input($_POST["password"]);
-    $uppercase = preg_match('@[A-Z]@', $password);
-    $lowercase = preg_match('@[a-z]@', $password);
-    $number = preg_match('@[0-9]@', $password);
-    $specialChars = preg_match('@[^\w]@', $password);
-
-     if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-      $errors[] = 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-     }
-  }
-
-  if (!empty($errors)) {
-
-    $_SESSION['errors'] = $errors;
-    exit;
-  }
-
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+         
 
 ?>
 <!DOCTYPE html>
@@ -88,10 +25,15 @@ function test_input($data) {
     <div class="wrapper">
         <nav id="sidebar">                
          <div class="sidebar-header">
-          <button onclick="document.getElementById('signup_bkgrd').style.display='block'">Sign Up</button>
-          <button>Login</button>  
-          <button onclick="document.getElementById('profile').style.display='block'" >Profile</button>
-          
+       <?php
+       if(isset($_SESSION['user_name']) && !empty($_SESSION['user_name']) ){
+        ?>
+        <p><?php echo "Hello, " . $_SESSION['user_name'];?>!</p>
+        <button class='form_links' id='logout_link'><a  href="logout.php">Logout</a></button>
+       <?php }else{  ?> 
+       <button class='form_links' id='login_link'><a  href="login.php">Login</a></button>
+       <button class='form_links' id='signup_link'><a href="signup.php">Register</a></button>
+       <?php }  ?>   
          </div>
           <ul class="list-unstyled components">             
               <li class="active">
@@ -119,7 +61,7 @@ function test_input($data) {
         </nav>        
 
         <div id="content">
-             <header id='header-banner'class="container-fluid" style="position:relative;">
+            <header id='header-banner'class="container-fluid" style="position:relative;">
              <button type="button" id="sidebarCollapse" class="btn btn-info" title="toggle_sidebar">
               <i class="fas fa-align-left"></i>   
              </button>
@@ -167,35 +109,8 @@ function test_input($data) {
             </header>
 
 
-             <div class='grid_container'>    
-              <div class='model' id='signup_bkgrd' class='form_model'>
-                <div id='signup_form'>
-                <p><span class="error">* required field</span></p>
-                  <form id='form'method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-                    Name: <input type="text" name="name" required>
-                    <span class="error">* <?php echo $nameErr;?></span>
-                    <br><br>
-
-                    E-mail: <input type="text" name="email" id='email_input' required>
-                    <span id='email_err' class="error">* <?php echo $emailErr;?></span>
-                    <br><br>
-
-                    Password: <input type="text" name="password" id='pswd_input' required>
-                    <span id='pswd_err' class="error"><?php echo $passwordErr;?></span>
-                    <br><br>
-
-                    <input type="submit" name="submit" value="Submit">  
-                  </form>
-                  
-                </div>
-              </div> 
-                <div class='model' id='profile'>
-                  <?php echo $name;?>
-                  <br>
-                  <?php echo $email;?>                 
-                  <br>
-                  <?php echo $password;?>                 
-                </div>
+             <div class='grid_container'>   
+          
                <div class='intro_section'>
                  <img class='star_wp' src="images/space_long.jpg" alt="">
                   <div class='intro_text'>
@@ -205,9 +120,33 @@ function test_input($data) {
                      aliquam non expedita quas obcaecati porro est nostrum! Dolorum, tempore.
                     </p>
                   </div>
-                    <img id='comet' src="images/comet.png" alt="">
-                    <img id='catOnShip' src="images/catOnSpaceship.png" alt="">                      
-               </div>
+                  
+                  <img id='cometCat_intro' src="images/cometCat_intro.png" alt="">
+                   <!-- <img id='comet' src="images/comet.png" alt="">
+                    <img id='catOnShip' src="images/catOnSpaceship.png" alt=""> -->                 
+                  
+                      
+               </div> 
+               
+
+   
+              <div class='model' id='profile'> 
+                <?php if(empty($_SESSION['user_name'])){
+                  echo 'There is no data';
+                } else{
+                  echo $_SESSION['user_name'];
+                }
+                ?>
+                <br>
+                <?php echo $_SESSION['email'];?>                 
+                <br>
+                <?php echo $_SESSION['password'];?>
+                <br>
+                <form action="logout.php" method="post" novalidate> 
+                  <input type="submit" name='logout' value="Logout"> 
+                </form>                  
+              </div>
+
 
                <div class='article_section'>
                 <p class='header text-center'>Featured Articles</p>
@@ -232,8 +171,9 @@ function test_input($data) {
                   </div>
                   <div class='article' id='article_four'> 
                     <img id='multi_verse' src="images/multi_verse.jpg" alt="">
-                    <p>The Multiverse Theory</p> 
+                    <p>The Multiverse <br> Theory</p> 
                     <div id='article_four_bkgrd'></div> 
+                    <div id='article_four_bkgrd2'></div> 
                        
                   </div>
                 </div>

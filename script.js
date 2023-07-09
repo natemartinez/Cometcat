@@ -93,8 +93,8 @@ $(document).ready(function() {
                     }
                     
                   }
-                
-                  nextHourly = (nextHourly % 12 || 12) + ':00 ' + (nextHourly < 12 ? 'AM': 'PM');
+                  
+                  nextHourly = (nextHourly % 12 || 12) + ':00 ' + (nextHourly < 12 || nextHourly >= 24 ? 'AM': 'PM');
 
                   nextHourlyObject.time = nextHourly;
                   nextHourlyObject.temp = nextHourTemp;
@@ -104,26 +104,25 @@ $(document).ready(function() {
                   hourlyTempArr.push(nextHourlyObject);
                   
               }
-              console.log(hourlyTempArr)
 
               //Try to D.R.Y, put them in a function with each spot as an argument
               $('#hour_one').append(hourlyTempArr[0].time);
-              $('#temp_one').append(hourlyTempArr[0].temp);
+              $('#temp_one').append(hourlyTempArr[0].temp + '\u00B0');
               $('#condition_one').append(hourlyTempArr[0].condition);
               $('#icon_one').append(hourlyTempArr[0].icon);
 
               $('#hour_two').append(hourlyTempArr[1].time);
-              $('#temp_two').append(hourlyTempArr[1].temp);
+              $('#temp_two').append(hourlyTempArr[1].temp + '\u00B0');
               $('#condition_two').append(hourlyTempArr[1].condition);
               $('#icon_two').append(hourlyTempArr[1].icon);
 
               $('#hour_three').append(hourlyTempArr[2].time);
-              $('#temp_three').append(hourlyTempArr[2].temp);
+              $('#temp_three').append(hourlyTempArr[2].temp + '\u00B0');
               $('#condition_three').append(hourlyTempArr[2].condition);
               $('#icon_three').append(hourlyTempArr[2].icon);
 
               $('#hour_four').append(hourlyTempArr[3].time);
-              $('#temp_four').append(hourlyTempArr[3].temp);
+              $('#temp_four').append(hourlyTempArr[3].temp + '\u00B0');
               $('#condition_four').append(hourlyTempArr[3].condition);
               $('#icon_four').append(hourlyTempArr[3].icon);
             };
@@ -138,11 +137,7 @@ $(document).ready(function() {
         $('#logo').toggleClass('push');
         $('.earth-container').toggleClass('move');
         $('.intro_text').toggleClass('sidebar_move');
-        $('#comet').toggleClass('sidebar_move_img');
-        $('#catOnShip').toggleClass('sidebar_move_img');
-        $('#planetCat').toggleClass('sidebar_move_img');
-        $('#rec_text').toggleClass('sidebar_move_img');
-        $('#telescope').css('width', '40em');
+        $('#cometCat_intro').toggleClass('sidebar_move_img');
 
     });
 
@@ -166,12 +161,14 @@ $(document).ready(function() {
   });
 
   var signupModel = document.getElementById('signup_bkgrd');
+  var loginModel = document.getElementById('login_bkgrd');
   var profileModel = document.getElementById('profile');
 
    window.onclick = function(event) {
     if (event.target == signupModel || event.target == profileModel) {
         signupModel.style.display = "none";
         profileModel.style.display = "none";
+        loginModel.style.display = "none";
     }
 }
 
@@ -203,21 +200,20 @@ $(document).ready(function() {
   }
 
   //client-side profile verification
-const form = document.getElementById('form');  
-const emailInput = document.getElementById('email_input');
-const emailErr = document.getElementById('email_err');
+const signupForm = document.getElementById('signup_form');  
+const loginForm = document.getElementById('login_form');  
 const pswdInput = document.getElementById('pswd_input');
 const pswdErr = document.getElementById('pswd_err');
+const emailInput = document.getElementById('email_input');
+const emailErr = document.getElementById('email_err');
 
-form.addEventListener('submit', function(event) {
+if(signupForm){
+  signupForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent form submission
 
-  const email = emailInput.value;
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-  const pswd = pswdInput.value;
-  const pswdPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+  const pswdPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
   const pswdErrMsg = `
         <strong>Password must contain:<strong>
         <ul>
@@ -225,21 +221,40 @@ form.addEventListener('submit', function(event) {
           <li>Uppercase</li>
           <li>Lowercase</li>
         </ul>
-      `
-
-  if (!emailPattern.test(email)) {
-    // Display an error message or apply a visual indicator
+      `;
+  if (!emailPattern.test(emailInput.value)) {
     emailErr.innerText = 'Invalid email';
     return;
   }
-  if (!pswdPattern.test(pswd)) {
-    // Display an error message or apply a visual indicator
+  if (!pswdPattern.test(pswdInput.value)) {
     pswdErr.innerHTML = pswdErrMsg;
     return;
   }
+  signupForm.submit();
+ });
+}else{
+  loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+ 
+  const pswdPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-  // If the email is valid, you can proceed with form submission
-  form.submit();
-});
+  const pswdErrMsg = `
+        <strong>Password must contain:<strong>
+        <ul>
+          <li>At least 8 characters</li>
+          <li> 1 Uppercase letter</li>
+          <li> 1 Lowercase letter</li>
+        </ul>
+      `;
+  if (!pswdPattern.test(pswdInput)) {
+    pswdErr.innerHTML = pswdErrMsg;
+    return;
+  }
+  loginForm.submit();
+ });
   
+}
+
+//Put the form password requirements below
+
 });
