@@ -43,15 +43,15 @@
                 <a class='ow_Item' href="pages/our_world.php">Our World</a>
               </li>
               <li>
-                <a class="sn_Item" href="/pages/space_neighbors.html">Our Space Neighbors</a>    
+                <a class="sn_Item" href="pages/space_neighbors.php">Our Space Neighbors</a>    
               </li>
 
               <li>
-                <a class="ffa_Item" href="">Far Far Away</a>
+                <a class="ffa_Item" href="pages/ff_away.php">Far Far Away</a>
               </li>
 
               <li>
-                <a class="se_Item" href="/pages/explorers.html">Space Explorers</a>
+                <a class="se_Item" href="/pages/space_explorers.php">Space Explorers</a>
               </li>
 
               <li>
@@ -161,6 +161,7 @@
                   <div class='article' id='article_two'>
                     <p>The first rocket</p>
                     <div id='article_two_bkgrd'></div>
+                    <div id='article_two_bkgrd2'></div>
                     <img id='rocket_launch' src="images/rocket_launch.jpg" alt="">
                   </div>
                   <div class='article' id='article_three'>
@@ -171,7 +172,7 @@
                   </div>
                   <div class='article' id='article_four'> 
                     <img id='multi_verse' src="images/multi_verse.jpg" alt="">
-                    <p>The Multiverse <br> Theory</p> 
+                    <p>The Multiverse Theory</p> 
                     <div id='article_four_bkgrd'></div> 
                     <div id='article_four_bkgrd2'></div> 
                        
@@ -265,11 +266,7 @@
 
         </div>
 
-      </div>
-         
-
-           
-         
+      </div>      
           
      </div>
     

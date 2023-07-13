@@ -344,7 +344,6 @@ a.article:hover {
     font-size: 4em;
 }
 .header_sec p{
-    width: 30em;
     font-size: 1.7em;
 }
 
@@ -394,14 +393,16 @@ a.article:hover {
 .planet_title{
     position: relative;
     z-index: 2;
-    font-size: 4em;
+    font-size: 10vw;
     transition: transform 0.3s ease;
     float: right;
 }
 .planet_pic{
     position: relative;
     z-index: 2;
-    margin-right: 11em;
+    width: 30vw;
+    margin-left: 2em;
+    margin-right: 2em;
     transition: transform 0.3s ease;
 }
 .planet_pic:hover{
@@ -452,7 +453,7 @@ a.article:hover {
     border: none;
 }
 .planet_menu_arrow{
-    width: 3em;
+    width: 2em;
 }
 
 .btn_move{
@@ -505,7 +506,7 @@ a.article:hover {
 .stats_div{
     display: flex;
     position: relative;
-    margin-top: 8em;
+    margin-top: 2em;
     margin-left: 3em;
     
 }
@@ -550,15 +551,13 @@ a.article:hover {
 
 .earth_comp_pic{
     width: 75px;
-    height: 75px;
 }
 
 .sun_sec{
     grid-row: 3 / 5;
 }
 #sun_pic{
-    width: 20em;
-    margin-left: 10em;
+
 }
 #sun_comp_pic{
     width: 200px;
@@ -572,9 +571,7 @@ a.article:hover {
     animation-duration: 2s;
 }
 #mercury_pic{
-    width: 23em;
-    height: 12em;
-    margin-left: 8em;
+   
 }
 #mercury_pic:hover{
     
@@ -587,9 +584,7 @@ a.article:hover {
     grid-row:7/9;
 }
 #venus_pic{
-    width: 24em;
-    height: 24em;
-    margin-left: 8em;
+    
 }
 #venus_comp_pic{
     width: 100px;
@@ -600,9 +595,7 @@ a.article:hover {
     grid-row: 9/11;
 }
 #mars_pic{
-    width: 12em;
-    height: 12em;
-    margin-left: 13em;
+   
 }
 #mars_comp_pic{
     width: 60px;
@@ -613,9 +606,7 @@ a.article:hover {
     grid-row: 11/13;
 }
 #jupiter_pic{
-    width: 18em;
-    height: 18em;
-    margin-left: 10em;
+    
 }
 #jup_comp_pic{
     width: 135px;
@@ -629,9 +620,7 @@ a.article:hover {
     grid-row: 13/15;
 }
 #saturn_pic{
-    width: 33em;
-    height: 20em;
-    margin-left: 1em;
+    
 }
 #saturn_comp_pic{
     width: 100px;
@@ -641,9 +630,7 @@ a.article:hover {
     grid-row: 15/17;
 }
 #uranus_pic{
-    width: 15em;
-    height: 15em;
-    margin-left: 10em;
+    
 }
 #uranus_comp_pic{
     width: 100px;
@@ -653,9 +640,7 @@ a.article:hover {
     grid-row: 17/19;
 }
 #neptune_pic{
-    width: 15em;
-    height: 15em;
-    margin-left: 10em;
+   
 }
 #neptune_comp_pic{
     width: 100px;
@@ -665,9 +650,7 @@ a.article:hover {
     grid-row: 19/21;
 }
 #pluto_pic{
-    width: 12em;
-    height: 11em;
-    margin-left: 10.5em;
+    margin-left: 2.5em;
 }
 #pluto_comp_pic{
     width: 100px;
@@ -679,6 +662,15 @@ a.article:hover {
     }
     .wallpaper{
         height: 7em;
+    }
+    #sidebar{
+        min-width: 15em;
+    }
+    #sidebar.active{
+        display: none;
+    }
+    #sidebar li{
+        margin-top: 1em;
     }
 
     #logo{
@@ -692,16 +684,162 @@ a.article:hover {
      width: 150px;
     }
 
+    .grid_container{
+        grid-template-rows: repeat(11, 250px);
+        
+    }
 
-    #sidebar{
-        min-width: 15em;
+    @keyframes lower_height {
+        0%{
+            margin-top: -0em;
+            height: 10em;
+        }
+    
+    
+        100%{
+            margin-top: -15em;
+            height: 5em;
+        }
     }
-    #sidebar.active{
-        display: none;
+    @keyframes revert_height{
+        0%{
+            margin-top: -10em;
+            height:5em
+        }
+        100%{
+            margin-top: 0em;
+            height: 32vh;
+        }
     }
-    #sidebar li{
+    
+    .header_sec{
+        grid-column: 3/10;
+    }
+    .header_sec h2{
         margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 7vw;
     }
+    .header_sec p{
+        font-size: 4.5vw;
+    }
+
+    .planet_sec{
+        margin-top: 3em;
+    }
+    .planet_menu_btn{
+        width: 3em;
+        height: 3em;
+    }
+    .planet_bkgrd{
+        height: 32vh;
+    }
+    .planet_pic{
+        width: 30vw;
+        margin-right: 2em;
+    }
+    .planet_title{
+        font-size: 10vw;
+    }
+    .planet_main_title{
+        margin-top: -8em;
+        margin-left: 4em;
+        width: max-content;
+        font-size: 7vw;
+    }
+    
+    .comp{
+        margin-top: 0em;
+        margin-right: 1em;
+        margin-left: -2em;
+    }
+    .stats{
+        column-gap: 1em;
+    }
+    .stats_div{
+        margin-left: 2em;
+    }
+    .stats p{
+        font-size: 2.8vw;
+        margin-bottom: 0.5em;
+    }
+    .stats_col_1{
+        margin-top: 1em;
+        margin-right: 0em;
+    }
+
+    .menu_appear{
+        height: 5em;
+        margin-top: -15em;
+    }
+
+    @keyframes btn_move{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+            margin-top: -10em;
+            margin-left:0em;
+            transform: rotate(180deg);
+        } 
+        100%{
+            opacity: 1;
+            margin-top: -14.5em;
+            margin-left: 0em;
+            transform:rotate(180deg);
+        }
+    }
+
+    .sun_sec{
+        grid-row: 3/4;
+    }
+    #sun_comp_pic{
+        width: 22vw;
+    }
+    #sun_earth_pic{
+        width: 3vw;
+    }
+    #sun_next_button{
+        top: 4.5em;
+        background: transparent;
+        width: 9vw;
+        border: none;
+        position: relative;
+        height: 3em;
+        padding: 0em;
+        margin-right: 47.5em;
+    } 
+    #sun_next_button img{
+        width: 1.5em;
+        transform: rotate(90deg);
+    }
+
+    .mercury_sec{
+        grid-row: 4/5;
+    }
+    .venus_sec{
+        grid-row: 5/6;
+    }
+    .mars_sec{
+        grid-row: 6/7;
+    }
+    .jupiter_sec{
+        grid-row: 7/8;
+    }
+    .saturn_sec{
+        grid-row: 8/9;
+    }
+    .uranus_sec{
+        grid-row: 9/10;
+    }
+    .neptune_sec{
+        grid-row: 10/11;
+    }
+    .pluto_sec{
+        grid-row: 11/12;
+    }
+
 }
 
 @media screen and (min-width:426px) and (max-width:464px){

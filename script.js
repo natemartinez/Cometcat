@@ -20,7 +20,7 @@ $(document).ready(function() {
            .then(function(data) {
             currentWeek = data;
             
-             return fetch('weather_conditions.json', {
+             return fetch('../weather_conditions.json', {
              method: 'GET',
             });
           }).then(response => response.json())
@@ -43,7 +43,7 @@ $(document).ready(function() {
                   if(curCode == conditions[i].code){
                     conditionNowIcon = conditions[i].icon;
                     conditionNow = conditions[i].day;
-                    conditionImg.src = 'images/weather_icons/day/' + conditionNowIcon + '.png';  
+                    conditionImg.src = '../images/weather_icons/day/' + conditionNowIcon + '.png';  
                   }
                 }
               } 
@@ -52,7 +52,7 @@ $(document).ready(function() {
                   if(curCode == conditions[i].code){
                     conditionNowIcon = conditions[i].icon;
                     conditionNow = conditions[i].night;                 
-                    conditionImg.src = 'images/weather_icons/night/' + conditionNowIcon + '.png';
+                    conditionImg.src = '../images/weather_icons/night/' + conditionNowIcon + '.png';
                   }
                 }
               }
@@ -100,7 +100,7 @@ $(document).ready(function() {
                   nextHourlyObject.temp = nextHourTemp;
                   nextHourlyObject.condition = nextCondition;
                   
-                  nextHourlyObject.icon = conditionImg ="<img src='images/weather_icons/" + timeOfDay + "/" + nextConditionIcon + ".png'>";
+                  nextHourlyObject.icon = conditionImg ="<img src='../images/weather_icons/" + timeOfDay + "/" + nextConditionIcon + ".png'>";
                   hourlyTempArr.push(nextHourlyObject);
                   
               }

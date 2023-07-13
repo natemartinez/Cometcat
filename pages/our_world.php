@@ -1,5 +1,5 @@
 <?php
-  
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,57 +17,95 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Cairo&display=swap" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript" src="../script.js"></script>
-    <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                
-            </div>
+    <nav id="sidebar">                
+         <div class="sidebar-header">
+       <?php
+       if(isset($_SESSION['user_name']) && !empty($_SESSION['user_name']) ){
+        ?>
+        <p><?php echo "Hello, " . $_SESSION['user_name'];?>!</p>
+        <button class='form_links' id='logout_link'><a  href="../logout.php">Logout</a></button>
+       <?php }else{  ?> 
+       <button class='form_links' id='login_link'><a  href="../login.php">Login</a></button>
+       <button class='form_links' id='signup_link'><a href="../signup.php">Register</a></button>
+       <?php }  ?>   
+         </div>
+          <ul class="list-unstyled components">             
+              <li class="active">
+                <a href="../index.php">Home</a>
+              </li>
+              <li>
+                <a class='ow_Item' href="our_world.php">Our World</a>
+              </li>
+              <li>
+                <a class="sn_Item" href="space_neighbors.php">Our Space Neighbors</a>    
+              </li>
 
-            <ul class="list-unstyled components">
-                <li>
-                    <a href="../index.php">Home</a>
-                </li>
-  
-                <li>
-                    <a id="firstItem" href="our_world.php">Our World</a> 
-                </li>
+              <li>
+                <a class="ffa_Item" href="ff_away.php">Far Far Away</a>
+              </li>
 
-                <li>
-                    <a id="secondItem" href="space_neighbors.php">Our Space Neighbors</a> 
-                </li>
+              <li>
+                <a class="se_Item" href="space_explorers.php">Space Explorers</a>
+              </li>
 
-                <li>
-                    <a id="thirdItem" href="ff_away.php">Far Far Away</a>
-                </li>
-
-                <li>
-                    <a id="fourthItem" href="space_explorers.php">Space Explorers</a>
-                </li>
-
-                <li>
-                    <a id="sixthItem" href="comet_cadets.php">Comet Cadets</a>
-                </li>
-            </ul>
-       </nav>
+              <li>
+                <a class="cc_Item" href="/pages/comet_cadets.html">Comet Cadets</a>
+              </li>
+          </ul>        
+        </nav>     
  
         <div id="content">
            <header id='header-banner'class="container-fluid" style="position:relative;">
               <button type="button" id="sidebarCollapse" class="btn btn-info" title="toggle_sidebar">
                 <i class="fas fa-align-left"></i>   
               </button>
-              <img src="../images/space_long.jpg" alt="stars" class="wallpaper">
               <img src="../images/logo.png" alt="cat jumping over words" id="logo">
+              <div class='weather_box'>
+                <div id='current_info' class='appear'>
+                  <p id='cur_location' class='text-center'></p>
+                  <div id="cur_condition_icon">
+                  </div>
+                    <div id='cur_weather'>
+                     <p id="cur_degrees"></p>
+                     <p id="cur_condition"></p>
+                    </div>
+                </div>
+                 
+               <button id='weather_btn'><img id='weather_arrow' src="../images/weather_arrow.png" alt=""></button>
+               <div id='forecast_box'>
+                 
+                  <div id='forecast_info'>
+                   <div class='forecast_hours' id="first_hour">
+                    <div class='icon' id="icon_one"></div>
+                    <p class='temp' id='temp_one'></p>
+                    <p class='time' id='hour_one'></p>
+                   </div>
+                   <div class='forecast_hours'  id="second_hour">
+                    <div class='icon' id="icon_two"></div>
+                    <p class='temp' id='temp_two'></p>
+                    <p class='time' id='hour_two'></p>
+                   </div>                
+                   <div class='forecast_hours'  id="third_hour">
+                    <div class='icon' id="icon_three"></div>
+                    <p class='temp' id='temp_three'></p>
+                    <p class='time' id='hour_three'></p>
+                   </div>              
+                   <div class='forecast_hours'  id="fourth_hour">
+                    <div class='icon' id="icon_four"></div>
+                    <p class='temp' id='temp_four'></p>
+                    <p class='time' id='hour_four'></p>
+                   </div>                    
+                  </div>
+
+               </div> 
+
+              </div>
            </header>
 
            <div class='grid_container'><img id='earth_wp' src="../images/earth_wp.jpg" alt="earth">
@@ -79,7 +117,7 @@
                 <img id='water_img' src="../images/ocean.jpg" alt="desert">
                 <img id='clouds_img' src="../images/clouds.jpg" alt="mountains">
                 <div id='header_pg'>
-                  <h1>The Blue Marble</h1><br>
+                  <p class='header'>The Blue Marble</p><br>
                   <p>
                   Earth is a wondrous and awe-inspiring planet, offering a unique combination of beauty, complexity, and fragility. As the only known haven for life in the universe, it is our collective responsibility to cherish, preserve, and safeguard the Blue Planet for future generations, ensuring a sustainable and harmonious coexistence with the natural world that has nurtured us all.
                   </p>
@@ -105,14 +143,14 @@
                  <p id='header_2'>Why is the Sun so important?</p>
                  <p id='gl_second_text'>
                  The sun's presence and the energy it provides are important to the existence and growth of life on Earth. 
-                 <br>
+                 <br><br>
                  The distance between the Earth and Sun, is just right for Earth to continue to thrive.
                  </p>  
                           
              </div>
 
              <div class='terrain_intro'>
-             <h2 class='header text-center'>The Beauty of Nature</h2>
+             <p class='header text-center'>The Beauty of Nature</p>
              <p>
              
              </p>
@@ -130,7 +168,7 @@
              </div>
 
              <div class='moon_intro'>
-              <h2 id='moon_header'>Our next door neighbor - The Moon</h2>
+              <p id='moon_header'>Our next door neighbor: The Moon</p>
               
              </div>
 
@@ -155,7 +193,7 @@
               <div id='end_img_square_one'></div>   
               <div id='end_text_square'>
                 <div id='end_text'>
-                 <h1>We still have more to learn!</h1>
+                 <p class='header'>We still have more to learn!</p>
                  <p>Come join the comet cadet newsletter, as we deilver current news, facts, and other annoucements on our journey through the stars!</p>
                 </div>
                 <button id='cta_button'>Check it out!</button>
@@ -217,6 +255,14 @@
       
     </div>
    
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="../script.js"></script>
 </body>
 
 </html>

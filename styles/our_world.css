@@ -128,6 +128,7 @@ span {
     transition: all 0.3s;
     position: sticky;
     position: -webkit-sticky;
+    z-index: 4;
 }
 
 #sidebar.active {
@@ -318,10 +319,131 @@ a.article:hover {
    
 }
 
+.weather_box{
+    position: absolute;
+    top:0.5em;
+    right: 1em;
+    width: 5em;
+    height: 3em;
+    background-color:#47748b;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#cur_condition_icon img{
+    position: absolute;
+    top: 0.5em;
+    left: 0em;
+    margin-right: 1em;
+    width: 2em;
+}
+#cur_location{
+    display: none;
+}
+#cur_weather{
+    width: max-content;
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    font-size: 0.45em;
+    text-align: center;
+}
+#cur_degrees{
+    margin: 0em;
+    font-size: 2em;
+    font-weight: bold;
+}
+#cur_condition{
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+    display: none;
+}
+
+#forecast_box{
+    opacity: 0;
+}
+#forecast_box .header{
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+}
+#forecast_info{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 9em;
+    column-gap: 0.8em;
+    padding: 1em 0.5em 1.5em 0.5em;
+}
+.temp{
+    font-family: 'Cairo';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:10px
+}
+
+.time{
+    font-family:'Cairo';
+    font-size: 12px;
+    margin-top: -15px;
+}
+.icon img{
+    width: 45px;
+}
+.forecast_hours{
+    position: relative;
+    text-align: center;
+}
+
+.disappear{
+    animation: fade_out 0.3s forwards;
+    animation-timing-function: ease-in;
+}
+.appear{
+    animation: fade_in 0.3s forwards;
+    animation-timing-function: ease-in;
+}
+@keyframes fade_out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fade_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#weather_btn{
+     background-color: transparent;
+     border: none;
+     position: absolute;
+     right: 0.2em;
+     top: 0.2em;
+     outline: none;
+     z-index: 2;
+     display: none;
+}
+.btn_turn{
+    transform: rotate(180deg);
+}
+#weather_arrow{
+   width: 1.5em;
+}
+
+
 .grid_container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(18, 250px);
+    grid-template-rows: repeat(19, 250px);
 }
 
 
@@ -368,7 +490,7 @@ a.article:hover {
     
 }
 #hills_img{
-    position: 'absolute';
+    position: absolute;
     z-index: 2;
     width: 16em;
     height: 10em;
@@ -392,10 +514,9 @@ a.article:hover {
 #header_pg{
     z-index: 1;
     position: relative;
-    margin-left: 11em;
-    width: 29em;
+    margin-left: 35em;
 }
-#header_pg h1{
+#header_pg .header{
     font-family: 'Cairo';
     font-size: 4em;
     text-align: center;
@@ -533,7 +654,7 @@ a.article:hover {
     width: 18em;
     margin-left: 29em;
     font-size: 1.5em;
-    text-align: center;
+    text-align: end;
 }
 
 .moon_intro{
@@ -591,7 +712,7 @@ a.article:hover {
 
 .end_content{
     display: flex;
-    grid-row: 17 / 18;
+    grid-row: 17 / 19;
     grid-column: 1 / 12;
 }
 #n_lights_img{
@@ -617,15 +738,19 @@ a.article:hover {
     left: 50em;
     margin-top: 4em;
     width: 37em;
-    height: 22em;
+    height: 21em;
     text-align:center;
     padding:3em 1em 1em 4em;
     z-index: 1;
-    background-color: #5fc494;
+    background-color: #41464b;
 }
 #end_text{
  position: relative;
  z-index: 3;
+}
+#end_text .header{
+    font-size: 2.5em;
+    margin-top: 0em;
 }
 #end_text p{
     margin-top: 1em;
@@ -639,106 +764,13 @@ a.article:hover {
 }
 
 @media screen and (max-width:426px) {
-    #header-banner{
-        height: 7em;
-    }
-    .wallpaper{
-        height: 7em;
-    }
 
-    #logo{
-        left: 6em;
-        top: 0em;
-        width: 125px;
-    }
-    #logo.push{
-     left: 9em;
-     top: -1em;
-     width: 150px;
-    }
-
-
-    #sidebar{
-        min-width: 15em;
-    }
-    #sidebar.active{
-        display: none;
-    }
-    #sidebar li{
-        margin-top: 1em;
-    }
-}
-
-@media screen and (min-width:426px) and (max-width:464px){
-    #header-banner{
-        height: 7em;
-    }
-    .wallpaper{
-        height: 7em;
-    }
-
-    #logo{
-        width: 10em;
-        top:-1em;
-        left: 6em;
-    }
-    #logo.push{
-        width: 10.5em;
-        left:6em;
-        top: -1em;
-    }
-}
-
-@media screen and (min-width:465px) and (max-width:544px) {
-    
-    #logo{
-        top: -1.5em;
-        left: 7em;
-        width: 12em;
-    }
-    #logo.push{
-        left:7em;
-        top:-1.5em;
-        width: 12em;
-    }
-
-    .wallpaper{
-        height: 125px;
-    }
-    #header-banner{
-        height: 125px;
-    }
-}
-
-@media screen and (min-width:545px) and (max-width:645px){
-    
-    #logo{
-        width: 11em;
-        top: -1em;
-        left: 8em;
-        margin: 0 auto;
-    }
-    #logo.push{
-        left:10em;
-        
-    }
-
-    #header-banner{
-        height: 7em;
-    }
-    .wallpaper{
-        height: 7em;
-    }
-
-    
-}
-
-@media screen and (min-width:646px) and (max-width:767px) {
     #sidebar {
         min-width: 80px;
         max-width: 80px;
         text-align: center;
         margin-left: -80px !important;
+        display: none;
     }
     .dropdown-toggle::after {
         top: auto;
@@ -750,6 +782,7 @@ a.article:hover {
     }
     #sidebar.active {
         margin-left: 0 !important;
+        display: inline-block;
     }
     #sidebar .sidebar-header h3,
     #sidebar .CTAs {
@@ -787,6 +820,633 @@ a.article:hover {
     .wallpaper{
         height: 7em;
     }
+
+    #logo{
+        left: 5em;
+        top: -1em;
+        width: 11em;
+    }
+    #logo.push{
+        left: 9em;
+        top: -1em;
+        width: 11em;
+    }
+
+
+    #sidebar{
+        min-width: 0em;
+    }
+    #sidebar li{
+        margin-top: 1em;
+    }
+
+    .grid_container{
+        grid-template-rows: repeat(26, 250px);
+    }
+
+    .grid_header{
+        grid-row: 1 / 6;
+        grid-column: 1/13;
+        padding: 25px 20px;
+        text-align: center;
+    }
+    #top_square{
+        width: 7em;
+        height: 5em;
+        background-color: #85604f;
+        z-index: 0;
+        position: absolute;
+        margin-top: 1em;
+        margin-left: 1.5em;
+        z-index: 1;
+    }
+    #mid_square{
+        width: 4em;
+        height: 7.5em;
+        background-color: #537986;
+        z-index: 1;
+        position: absolute;
+        margin-top: 12.5em;
+    }
+    #btm_square{
+        width: 3em;
+        height: 6.5em;
+        background-color: slategray;
+        z-index: 0;
+        position: absolute;
+        margin: 11em 3em 0em 0.5em;
+        right: 0em;
+    }
+    #hills_img{
+        position: absolute;
+        z-index: 2;
+        width: 11em;
+        height: 8em;
+        margin-left: 2em;
+        margin-top: 1.5em;
+    }
+    #water_img{
+        position: absolute;
+        right: 4em;
+        margin: 4em 0em 0em 0em;
+        width: 8em;
+        height: 12em;
+        filter: brightness(90%);
+    }
+    #clouds_img{
+        position: absolute;
+        margin: 9em 0em 0em 0em;
+        width: 7em;
+        height: 10em;
+        z-index: 2;
+    }
+
+    #header_pg{
+        position: relative;
+        margin-left: 0em;
+        padding: 1em;
+        margin-top: 19em;
+    }
+    #header_pg .header{
+        margin-top: 10vh;
+        font-size: 10vw;
+    }
+    #header_pg p{
+        font-size: 6vw;
+        margin-top: 3em;
+    }
+
+
+    .gl_header{
+        grid-row: 5 / 7;
+        grid-column: 2 / 12;
+        margin-top: 2em;
+    }
+
+    .gl_content{
+        display: flex;
+        flex-direction: column;
+        grid-row: 7/13;
+        grid-column: 1/13;
+    }
+    #header_1{
+        font-size: 1.5em;
+    }
+    #gl_first_text{
+        font-size: 1.5em;
+        padding: 1em 10em 0em 1em;
+    }
+
+    #soup_pic{
+        width: 18em;
+        margin-left: 5em;
+        margin-top: 3em;
+        position: relative;
+    }
+    #sunrise{
+        position: relative;
+        margin-top: 5em;
+        margin-left: 3em;
+        width: 13em;
+    }
+
+    #header_2{
+        margin-top: 2.5em;
+        font-size: 1.6em;
+        text-align: center;
+    }
+    #gl_second_text{
+        margin-top: 1em;
+        font-size: 1.4em;
+        text-align: right;
+        width: 17em;
+    }
+
+
+    .terrain_intro{
+        grid-row: 13/15;
+        grid-column: 1/13;
+        margin-top: 10em;
+    }
+
+    
+    .terrain_content{
+        display: flex;
+        grid-row: 15 / 19;
+        grid-column: 1 / 13;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #bg_square{
+        position: absolute;
+        width: 22em;
+        height: 11em;
+        margin-top: 8em;
+        z-index: 0;
+        background-color: black;
+    }
+    #ocean_floor{
+        width: 11em;
+        height: 8em;
+        position: absolute;
+        z-index: 1;
+        left: 0em;
+        margin-top: 10em;
+    }
+    #mountain{
+        width: 13em;
+        height: 11em;
+        position: absolute;
+        z-index: 2;
+        left: 6em;
+        margin-top: 0em;
+    }
+    #rainforest{
+        position: absolute;
+        z-index: 0;
+        width: 13em;
+        height: 9em;
+        margin-top: 16em;
+        left: 5em;
+    }
+    #arizona{
+        width: 7em;
+        height: 12em;
+        position: absolute;
+        left: 15em;
+        z-index: 2;
+        margin-top: 7em;
+    }
+    #life_content_text{
+        position: relative;
+        width: 16em;
+        margin-top: 18em;
+        font-size: 1.5em;
+        text-align: center;
+        margin-left: 0em;
+    }
+
+    .moon_intro{
+        grid-row: 19/20;
+        padding: 1em;
+        text-align: center;
+    }
+    #moon_header{
+        font-size: 2.3em;
+    }
+
+    
+    .moon_content{
+        grid-row: 20/23;
+    }
+    #moon_content_text{
+        width: 20em;
+        font-size: 1.1em;
+        position: absolute;
+        margin-left: 1em;
+        margin-top: 20em;
+        text-align: center;
+    }
+    #bg_diamond{
+        width: 15em;
+        height: 15em;
+        background-color: purple;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 1em;
+    }
+    #bg_diamond_2{
+        width: 15em;
+        height: 15em;
+        background-color: black;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 4em;
+    }
+    #moon_pic{
+        width: 15em;
+        height: 14em;
+        right: 4em;
+        margin-top: 2em;
+        position: absolute;
+    }
+    #cat_logo_moon{
+        position: absolute;
+        margin-top: -2em;
+        transform: rotate(315deg);
+        width: 10em;
+        height: 10em;
+        right: 7em;
+    }
+
+    .end_content{
+        grid-row: 23/25;
+        grid-column: 1 / 13;
+    }
+    #n_lights_img{
+        width: 10em;
+        height: 15em;
+        position: relative;
+        z-index: 4;
+        margin-left: 0.5em;
+        margin-top: 9em;
+    }
+    #end_img_square_one{
+        position: absolute;
+        z-index: 3;
+        width: 10em;
+        height: 15em;
+        background-color: #5fc494;
+        margin-top: 10em;
+        margin-left: 0em;
+    }
+    #end_text_square{
+        position: absolute;
+        margin-top: 4em;
+        width: 25em;
+        height: 25em;
+        left: 0em;
+        text-align: center;
+        padding: 1em 1em 1em 11.5em;
+        z-index: 1;
+        background-color: #41464b;
+    }
+    #end_text .header{
+        font-size: 2em;
+    }
+    #end_text p{
+        margin-top: 0em;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:464px){
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+        display: none;
+    }
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+        display: inline-block;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+   
+    #header-banner{
+        height: 7em;
+    }
+    .wallpaper{
+        height: 7em;
+    }
+
+    #logo{
+        width: 10em;
+        top:-1em;
+        left: 6em;
+    }
+    #logo.push{
+        width: 10.5em;
+        left:6em;
+        top: -1em;
+    }
+}
+
+@media screen and (min-width:465px) and (max-width:544px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+        display: none;
+    }
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+        display: inline-block;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+   
+    #logo{
+        top: -1.5em;
+        left: 7em;
+        width: 12em;
+    }
+    #logo.push{
+        left:7em;
+        top:-1.5em;
+        width: 12em;
+    }
+
+    .wallpaper{
+        height: 125px;
+    }
+    #header-banner{
+        height: 125px;
+    }
+}
+
+@media screen and (min-width:545px) and (max-width:645px){
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+        display: none;
+    }
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+        display: inline-block;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+   
+
+    #logo{
+        width: 11em;
+        top: -1em;
+        left: 8em;
+        margin: 0 auto;
+    }
+    #logo.push{
+        left:10em;
+        
+    }
+
+    #header-banner{
+        height: 7em;
+    }
+    .wallpaper{
+        height: 7em;
+    }
+
+    #top_square{
+        width: 10em;
+        height: 8em;
+        background-color: #85604f;
+        z-index: 0;
+        position: absolute;
+        margin-top: 1em;
+        margin-left: 2em;
+        z-index: 1;
+    }
+    #mid_square{
+        width: 3em;
+        height: 6.5em;
+        background-color: #537986;
+        z-index: 1;
+        position: absolute;
+        margin-top: 12em;
+    }
+    #btm_square{
+        width: 4em;
+        height: 2.5em;
+        background-color: slategray;
+        z-index: 0;
+        position: absolute;
+        margin: 14em 0em 0em 12.5em;
+    }
+
+    #hills_img{
+        position: absolute;
+        z-index: 2;
+        width: 10em;
+        height: 7em;
+        margin-left: 3em;
+        margin-top: 2em;
+    }
+    #water_img{
+        position: absolute;
+        margin: 8em 0em 0em 10em;
+        width: 6em;
+        height: 8em;
+        filter: brightness(90%);
+    }
+    #clouds_img{
+        position: absolute;
+        margin: 9em 0em 0em 0em;
+        width: 6em;
+        height: 9em;
+        z-index: 2;
+    }
+
+    #header_pg{
+        margin-left: 19em;
+        width: 20em;
+    }
+    #header_pg .header{
+        font-size: 1.5em;
+    }
+    #header_pg p{
+        font-size: 1em;
+    }
+
+    
+}
+
+@media screen and (min-width:646px) and (max-width:767px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+        display: none;
+    }
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+        display: inline-block;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+   
+
+    #header-banner{
+        height: 7em;
+    }
+    .wallpaper{
+        height: 7em;
+    }
     #logo{
         width: 13em;
         top:-2.5em;
@@ -801,10 +1461,79 @@ a.article:hover {
         width: 60%;
     }
 
+    #top_square{
+        width: 9em;
+        height: 9em;
+        background-color: #85604f;
+        z-index: 0;
+        position: absolute;
+        margin-top: 0em;
+        margin-left: 4em;
+        z-index: 1;
+    }
+    #mid_square{
+        width: 5em;
+        height: 7.5em;
+        background-color: #537986;
+        z-index: 1;
+        position: absolute;
+        margin-top: 11em;
+    }
+    #btm_square{
+        width: 4em;
+        height: 3.5em;
+        background-color: slategray;
+        z-index: 0;
+        position: absolute;
+        margin: 16em 0em 0em 14.5em;
+    }
+    #hills_img{
+        position: absolute;
+        z-index: 2;
+        width: 10em;
+        height: 8em;
+        margin-left: 5em;
+        margin-top: 1em;
+    }
+    #water_img{
+        position: absolute;
+        margin: 8em 0em 0em 10em;
+        width: 7em;
+        height: 10em;
+        filter: brightness(90%);
+    }
+    #clouds_img{
+        position: absolute;
+        margin: 8em 0em 0em 1em;
+        width: 6em;
+        height: 9em;
+        z-index: 2;
+    }
+
+    #header_pg{
+        z-index: 1;
+        position: relative;
+        margin-left: 19em;
+        width: 19em;
+    }
+    #header_pg .header{
+        font-size: 2em;
+    }
+
     
 }
 
 @media screen and (min-width:768px) and (max-width:865px){
+    #sidebar{
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+    #sidebar.active{
+        margin-left: 0 !important;
+    }
+    
     #header-banner{
         height:8em
     }
@@ -833,9 +1562,68 @@ a.article:hover {
         font-size: 4em;
         margin-left: 4em;
     }
+
+    #top_square{
+        width: 9em;
+        height: 9em;
+        background-color: #85604f;
+        z-index: 0;
+        position: absolute;
+        margin-top: 0em;
+        margin-left: 4em;
+        z-index: 1;
+    }
+    #mid_square{
+        width: 5em;
+        height: 7.5em;
+        background-color: #537986;
+        z-index: 1;
+        position: absolute;
+        margin-top: 11em;
+    }
+    #btm_square{
+        width: 4em;
+        height: 3.5em;
+        background-color: slategray;
+        z-index: 0;
+        position: absolute;
+        margin: 16em 0em 0em 14.5em;
+    }
+    #hills_img{
+        position: absolute;
+        z-index: 2;
+        width: 10em;
+        height: 8em;
+        margin-left: 5em;
+        margin-top: 1em;
+    }
+    #water_img{
+        position: absolute;
+        margin: 8em 0em 0em 10em;
+        width: 7em;
+        height: 10em;
+        filter: brightness(90%);
+    }
+    #clouds_img{
+        position: absolute;
+        margin: 8em 0em 0em 1em;
+        width: 6em;
+        height: 9em;
+        z-index: 2;
+    }
+
+    #header_pg{
+        z-index: 1;
+        position: relative;
+        margin-left: 21em;
+        width: 19em;
+    }
+    #header_pg .header{
+        font-size: 2em;
+    }
 }
 
-@media(min-width:866px) and (max-width:1023px) {
+@media(min-width:866px) and (max-width:1024px) {
 
 
 
@@ -862,10 +1650,67 @@ a.article:hover {
         margin-top:50px
     }
     
+    #top_square{
+        width: 11em;
+        height: 9em;
+        background-color: #85604f;
+        z-index: 0;
+        position: absolute;
+        margin-top: 0em;
+        margin-left: 5em;
+        z-index: 1;
+    }
+    #mid_square{
+        width: 6em;
+        height: 7.5em;
+        background-color: #537986;
+        z-index: 1;
+        position: absolute;
+        margin-top: 11em;
+    }
+    #btm_square{
+        width: 5em;
+        height: 3.5em;
+        background-color: slategray;
+        z-index: 0;
+        position: absolute;
+        margin: 19em 0em 0em 19.5em;
+    }
+
+
+    #hills_img{
+        width: 12em;
+        margin-top: 1em;
+    }
+    #water_img{
+        position: absolute;
+        margin: 10em 0em 0em 15em;
+        width: 7em;
+        height: 12em;
+        filter: brightness(90%);
+    }
+    #clouds_img{
+        position: absolute;
+        margin: 9em 0em 0em 1em;
+        width: 8em;
+        height: 10em;
+        z-index: 2;
+    }
+
+    #header_pg{
+        width: 25em;
+        margin-left: 26em;
+    }
+    #header_pg p{
+        font-size: 1.5vw;
+    }
+    #header_pg .header{
+        font-size: 2.5vw;
+    }
 
 }
 
-@media  screen and (min-width:1024px) {
+@media  screen and (min-width:1025px) {
 
 
     #logo{

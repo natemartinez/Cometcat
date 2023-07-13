@@ -95,7 +95,7 @@
                    <div class='slide active stats_div'>
                      <div class='comp'>
                         <img id='sun_comp_pic' src="../images/sun.png" alt="">
-                        <img class='earth_comp_pic' src="../images/earth.png" alt="">
+                        <img id='sun_earth_pic' class='earth_comp_pic' src="../images/earth.png" alt="">
                      </div>
                      <div class='stats'>
                        <div class='stats_col_1'>
@@ -122,7 +122,7 @@
                            Age: ~4.6 billion years
                           </p>
                           <p>
-                           Temperature: 27 million degrees F
+                           Temperature: <br> 27 million degrees F
                           </p>
                           <p>
                            Gravity: 274 m/s &#178;
@@ -164,7 +164,7 @@
                      
                      
                    </div>
-                   <button class='next_button'>Next</button>       
+                   <button id='sun_next_button' class='next_button'><img src="../images/planet_menu_arrow.png" alt=""></button>       
               </div>
              </div>
 

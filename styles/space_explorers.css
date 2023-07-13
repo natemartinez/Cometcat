@@ -373,9 +373,7 @@ a.article:hover {
     background: none;
     color: white;
 }
-.nav_icons{
-    
-}
+
 #astro_ico{
     width: 5.5em;
 }
@@ -522,19 +520,6 @@ a.article:hover {
     .wallpaper{
         height: 7em;
     }
-
-    #logo{
-        left: 6em;
-        top: 0em;
-        width: 125px;
-    }
-    #logo.push{
-     left: 9em;
-     top: -1em;
-     width: 150px;
-    }
-
-
     #sidebar{
         min-width: 15em;
     }
@@ -543,7 +528,25 @@ a.article:hover {
     }
     #sidebar li{
         margin-top: 1em;
+    } 
+
+    #logo{
+        left: 6em;
+        top: 0em;
+        width: 125px;
     }
+    #logo.push{
+     left: 6.5em;
+     top: -1em;
+     width: 10em;
+    }
+
+    .header_sec h2{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 7vw;
+    }
+
 }
 
 @media screen and (min-width:426px) and (max-width:464px){
